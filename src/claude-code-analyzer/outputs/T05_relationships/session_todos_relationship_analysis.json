@@ -1,0 +1,1844 @@
+{
+  "task_id": "T05",
+  "task_name": "Session-Todos关系分析",
+  "generation_time": "2025-08-02T00:00:28.090819",
+  "summary": {
+    "total_sessions": 208,
+    "sessions_with_todos": 228,
+    "total_todos_files": 260,
+    "unique_agents": 260
+  },
+  "relationship_distribution": {
+    "sessions_with_no_todos": -20,
+    "average_todos_per_session": 1.1403508771929824,
+    "max_todos_in_single_session": 26,
+    "relationship_types": {
+      "1:1": 224,
+      "1:10+": 1,
+      "1:6-10": 1,
+      "1:2-5": 2
+    }
+  },
+  "agent_reuse_analysis": {
+    "unique_agents": 260,
+    "reused_agents": 0,
+    "max_sessions_per_agent": 1,
+    "agent_distribution": {
+      "1": 260
+    }
+  },
+  "complex_relationships": [
+    {
+      "session_id": "13b33516-f174-4c12-b5c5-42329c8b5691",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 26,
+      "unique_agents": 26,
+      "has_self_agent": true,
+      "session_records": 2903,
+      "time_span_hours": 16.42,
+      "agent_pattern": "unique_agents"
+    },
+    {
+      "session_id": "159bf79b-a113-4d47-998c-e05e42e3e0cf",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 6,
+      "unique_agents": 6,
+      "has_self_agent": true,
+      "session_records": 608,
+      "time_span_hours": 1.16,
+      "agent_pattern": "unique_agents"
+    },
+    {
+      "session_id": "679d5575-8d2c-4c80-9ed0-e88a58b9667d",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 2,
+      "unique_agents": 2,
+      "has_self_agent": true,
+      "session_records": 129,
+      "time_span_hours": 0.08,
+      "agent_pattern": "unique_agents"
+    },
+    {
+      "session_id": "cd10d11a-105c-4690-a402-1340dee0368d",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 2,
+      "unique_agents": 2,
+      "has_self_agent": true,
+      "session_records": 67,
+      "time_span_hours": 0.2,
+      "agent_pattern": "unique_agents"
+    }
+  ],
+  "session_details": [
+    {
+      "session_id": "13b33516-f174-4c12-b5c5-42329c8b5691",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 26,
+      "unique_agents": 26,
+      "has_self_agent": true,
+      "session_records": 2903,
+      "time_span_hours": 16.42,
+      "agent_pattern": "unique_agents"
+    },
+    {
+      "session_id": "159bf79b-a113-4d47-998c-e05e42e3e0cf",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 6,
+      "unique_agents": 6,
+      "has_self_agent": true,
+      "session_records": 608,
+      "time_span_hours": 1.16,
+      "agent_pattern": "unique_agents"
+    },
+    {
+      "session_id": "679d5575-8d2c-4c80-9ed0-e88a58b9667d",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 2,
+      "unique_agents": 2,
+      "has_self_agent": true,
+      "session_records": 129,
+      "time_span_hours": 0.08,
+      "agent_pattern": "unique_agents"
+    },
+    {
+      "session_id": "cd10d11a-105c-4690-a402-1340dee0368d",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 2,
+      "unique_agents": 2,
+      "has_self_agent": true,
+      "session_records": 67,
+      "time_span_hours": 0.2,
+      "agent_pattern": "unique_agents"
+    },
+    {
+      "session_id": "c9c7962b-d565-4580-bad5-7c2e34000220",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 40,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "c5bc9dd9-ce50-47b4-b83e-c52137707c97",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 3,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "dbeb4cbf-7160-4f9c-a28e-7692bdaf0d7f",
+      "project": "-Users-Zhuanz-Projects-Syllo",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 489,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a0b03bab-a86a-4de1-baed-1788a3c9a122",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "d12b30e2-e26c-4107-8ed4-688634c6f4ec",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "b35e3cd9-f402-44c0-80e8-13192d212283",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "2d13cf76-e224-479d-b674-4ce58cb4fe9d",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 324,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "cba4974e-262e-4ff9-8485-05a34f206d38",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 3,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "f589948e-315b-4b2f-934a-af8a3466982a",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "f0a2a454-8c5d-4bb8-aee8-e17a546e4980",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 9,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "cc9423cf-bf72-462c-9b79-d6fa34b777cc",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 28,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "6f9560ff-0b84-43fc-a866-81c36084aeb0",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 309,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "aa92eec2-444c-4164-b685-4708bfeecb26",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 28,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fc425842-ea66-4b00-a873-7b312d268f88",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 367,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "b452135f-853d-42ac-96fd-f541a8f6fa0a",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "d22a64d5-37cd-4cd9-a4b9-850b2d5b32a2",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 33,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "d7f42bc7-965a-4d73-8962-b2c73dc6a942",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fc694624-b4f1-4b4c-a1ab-38dba9038652",
+      "project": "-Users-Zhuanz-Projects-Syllo",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 31,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "62c1d209-e788-4abe-b631-ea72f2a1aeb0",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 728,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "18dbe83d-b825-46d3-881d-062da89131c7",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 232,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "e5905ce4-1c0b-4301-a7fc-6526f125112d",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 23,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "f777f485-c4ce-40ab-8541-4ed073beb900",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 19,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "d44fa565-5936-4e1b-b259-ef782e189a68",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 3,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "22267a9a-ca90-4cdb-b445-0f0f4521f841",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "6cb73adc-4577-45e0-a0f5-6e974b7749d6",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 382,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "af84dbda-2334-4ef5-91c9-3ff98b99e9c9",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 8,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "9dbcbbc5-cfce-4980-a35c-b8ba52d4a53e",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 83,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a9eed458-66aa-4b4f-a97c-aac5c1f060d2",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 3,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "4e2f325e-b583-4d67-82a6-af637e4cae2e",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 9,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "130fe25c-1e60-4284-af63-6de0c007fe88",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 103,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a2fe0bca-1291-4a00-8b23-6c4386085ef5",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 18,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "50a4d26d-171b-4273-ac4a-d0191f0562f5",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "25b54c55-0a42-4cf0-be3c-7dce18f18478",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 3,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "74664bc9-8567-42d1-9e58-a992d3f61d34",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-prompt-enhancer",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "4484cdd7-bcf0-4eb2-9194-bad9eb6367e2",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 199,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "0920dfd6-38f0-4480-8c23-8c5f572f59ec",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 6,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "d0c37520-bd4b-4136-9e21-5091bc3513d1",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 275,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "78ed8728-f849-483f-957f-2c7061d8e994",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "3998bb23-993b-44de-9b42-3710985c26bc",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "eb3f24ef-5f6e-4c74-b609-149a82d1a0f5",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 292,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "ed8db256-c961-4b56-9d00-e67809765883",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 349,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "33dd31dd-497d-4165-8e53-c648e70acab1",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 76,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "7a44730b-7351-461f-a34a-3ad0c8542ff3",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 173,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "70bc2a06-b45c-461b-aade-bb6118329390",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 16,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a380817c-b0e5-455b-9be7-566e1916948d",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 387,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "09206745-7ba3-4950-a1d0-d02ceda223c0",
+      "project": "-Users-Zhuanz-Projects-nx-project",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 628,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "235a0396-bf98-4e62-a198-7c9c016ff503",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 275,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "0605eca9-9ed4-4f0f-bbe3-2db3531a04ef",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 131,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "0e9f2811-65d6-40b0-9843-33636fe5fb8f",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 9,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "e2f1de22-e024-4b26-86ee-feb1eeb731f6",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 80,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "628538ae-e08e-4e4e-bd35-79eafcc54557",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 6,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "ecfc9be2-d93b-4936-8736-0a7315086e49",
+      "project": "-Users-Zhuanz-Projects-Arche-claudecodeui",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 74,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "bb5effca-1df9-49bf-bbb0-1ce7961dd7e2",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "113a61f2-1633-456a-a654-892c4a9afc40",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 78,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a3ddf786-61a7-49bc-8d39-42aa931c282a",
+      "project": "-Users-Zhuanz-Projects-Syllo-mermaid-flow-prototype-development-flow",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 163,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "8deb0a29-ba6a-409c-9785-139fdd225f51",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 207,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "9513af10-89cc-41a5-918c-7f868b2dfe93",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP-markdown-xml-demo",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1086,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "94952f8d-a871-4740-8df5-b5d3680681bc",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 13,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fb0805da-fe00-48d9-b638-a1349525e6c5",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "43586f6d-863a-4166-954e-28468bbe98ef",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 135,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "bbf6af0a-8653-48c1-986a-a977824f62e3",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 463,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "287a532e-c0a4-408a-af55-6ac392fb9da1",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "b267eae5-425e-49cb-87b1-e4ca2df1a52f",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 165,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "2cc0031a-ab3a-4010-90f6-274aaba3a641",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 121,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "33ec5df3-edb7-486a-b7f9-7682ad2322e8",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 7,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "36b38126-9a92-4aa1-af2f-1f78e1c3f2e8",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 254,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "be5c89ea-985d-4c43-9c6a-cf6150d7a8f3",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP-markdown-xml-demo",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 347,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "e412c54f-69be-41d3-84bc-7efe41471ca3",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 3,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "000a2e37-df7d-4fa8-9d2d-0a0f2a34d9da",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "1c2fd100-4b72-45f7-a8dc-37ce2f4c4ba0",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 58,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a0adc0f5-609d-494a-b893-fcb2b921fbbf",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 3,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fdcb7861-6a1f-459a-9fc5-651b5f34b7c3",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 194,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "2f73e368-485c-4b7c-a08b-eb2e449dc112",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 37,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "64cfced8-5ff9-4243-ba83-6d4a94610974",
+      "project": "-Users-Zhuanz-Projects-nx-project",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 232,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a8d7fc2f-6463-4e21-ba63-71d22d71641a",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "040edb11-859c-4335-99d8-f3aa2b91a00d",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 311,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "dbd47b39-1c0e-44d6-9fa2-c6a8af4ab40a",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 14,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "342d2d94-c5a4-42b1-9864-619afafe18e8",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fc1ec0c5-f008-4d67-ac82-f821e854d899",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 318,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "e598469c-e6fa-4bc3-bdaa-4b85dde7cf97",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "430a8d2f-64a8-4f7e-b4f8-31181067f501",
+      "project": "-Users-Zhuanz-Projects-SylloOS-Nx",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 300,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fc654c76-9c11-45bb-962a-b940315be3f5",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 47,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "1f67ed79-a4c3-4097-9c25-462563f13fed",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 295,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "e022064f-5f6d-4905-9fd6-74ce414e9bf8",
+      "project": "-Users-Zhuanz-mmd-files",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 398,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "1475627d-1bf2-400a-aadc-06db8481d01c",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "3b8b513c-fff2-4bd6-880b-b77d4270ef2e",
+      "project": "-Users-Zhuanz-Projects-SylloOS-context-engineering-mermaid-flow",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 153,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "7a642424-c201-4b60-99cc-5b287b12328f",
+      "project": "-Users-Zhuanz-Projects-DocHunter",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 993,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "918ecad7-4d6b-497f-a887-204457e13e93",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "0cb7effa-440d-48c3-9600-605e3a24f4be",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 56,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "f63f812f-8051-41ce-801c-599042f3cdf0",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 58,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "4748a2d2-96b6-4df0-8076-6c0d8a8cd925",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "387954f2-cd48-4cf8-ba33-a9be23ca40ea",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "e3532d09-4b2c-46a4-9f68-656abc7767a4",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 387,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "ba87a487-c2ac-486f-8f3d-3e1f7043648d",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 91,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fec27aae-aacb-42f3-8129-155088f7b593",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 37,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "0584bb4b-bf08-4a63-803b-77bca573cd6e",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 49,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "9d078598-0413-4a79-9e33-99749727c53b",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 288,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "90790431-6c8b-42f5-a000-d75a1a8d60a7",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 287,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "2972cb06-98c7-46fd-8f1e-c15d50eaf600",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "59c4dfa6-ae1d-43f2-bc44-55a00e191c6f",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 15,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a7797d3e-ac93-4e25-aa0a-bd49b3378792",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 18,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fb1358cc-14d9-4625-b3e6-045a51398ce9",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "6b3b8624-7145-49e6-ac16-b2ac6f7b1395",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 178,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "aff67aea-cb9a-4b1a-a326-4b4c0e61d8ca",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 521,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "6f64f295-0441-47ed-97df-35cb2226bd20",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 383,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "dbd970ad-44ba-44dc-9f40-075c7925577c",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 8,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "f3030658-ae45-4c69-b935-ee36b6cbeb50",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 180,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "700b48b9-204d-4599-8114-ba0d6287da73",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 694,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "827f0bef-131e-44cf-9716-92932a133da3",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 25,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "0e2340ec-42e1-48a7-b29e-a28c89b0cbc3",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2001,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "c829cb3b-821e-4e1b-91e2-43133bd10e05",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 10,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "04d4b352-04af-447e-8824-17bee4986d7f",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 269,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "64345392-2270-463e-8e3c-8937980b8e9b",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "7ce31fe3-ca28-4321-b4d5-009e7eab3b87",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 316,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "f7e3708c-2e8c-4736-b650-018fd3331dc7",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 23,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "c26c932f-368e-41f0-85b5-60096da95e8a",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 32,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a0afa2ed-7358-48db-a8a4-35270ab72086",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 248,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "57bb26a3-62ae-47b3-ba5e-b1f0497605c4",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 496,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "8ccacc7c-cd1a-49e6-82e8-7018d0a03b5e",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "33388ab0-8873-4c26-93ba-ea978b2f0f7e",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 33,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "cae14a76-b2c5-4d82-b905-518a0042511c",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 83,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "6cb831b5-3576-4a11-babc-c257769bf69e",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 171,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "865796df-262e-40d9-8d2d-e550cc68b524",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": false,
+      "session_records": 83,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "46e4cfad-fc32-4828-a3a1-69d2624839bc",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "137e4b21-641f-4c6f-b288-ad127c871a24",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 203,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "10c028bd-bf40-4136-b58d-9ba174181a4c",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "10997c96-e680-4218-a0cf-9b1209a5b2dc",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 184,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "8c044747-9657-4093-95f4-ecaef5895436",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 374,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "7be092e0-535b-4e33-8c86-668c368feab5",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 57,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "8ff3d4f3-fcf4-4a51-9345-e71d89ee83af",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "f931d05e-28de-4264-bf3e-e771c62fe34e",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 33,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "33873de6-bcc5-47c7-88c1-eb47e1b04f18",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 6,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "b06dcb3c-a476-4990-b059-fa6ea2c2af9f",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 10,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "2c7b497a-105f-4126-b3fb-7ea0c052d62e",
+      "project": "-Users-Zhuanz-mmd-files",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 45,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "1d7c2140-fde2-4b00-974b-fae0ba1a33ad",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "2ebc58b2-9dba-4052-8ed7-76f46283bafa",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 415,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "d11175b2-2c92-493e-a7e0-f0e6dbcd103e",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 11,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "5b8642f5-7817-4d99-8b6d-4bf5f64eb71d",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 311,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "dc137827-70f1-4c6d-b26e-714f3116b3c3",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "2ea7bcd0-4bb1-4936-8688-eb1b5a5ca01e",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 1,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fccf53e7-6899-407a-9747-c4973b78f6c8",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "188bbb8b-1885-4140-9a37-aa1cfac601b6",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 5,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a8b3ebe9-ae9e-43a8-a110-54f67fd9b1f2",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 328,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "9d607596-3242-4bce-aabd-4220532105c4",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 9,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "c0aef192-9e05-4f22-8fbf-ab9d3d48712b",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "7c15faee-2f71-4963-875c-a6811fa90f04",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 28,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "349f5e0e-c5fe-45c0-b909-6019ca8a07a7",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 3,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "d3923380-e17f-4fbf-ba9c-1878115b9225",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "793f2fb0-7b9f-411d-9b43-52177ae96ada",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 409,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "8130546b-0321-40e9-ab2e-ffcc8ff44d32",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 16,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "63311ead-3bdc-4e3d-a73a-10e4ecda6102",
+      "project": "-Users-Zhuanz-Projects-Syllo",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 255,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fc841eab-9d40-4dad-a64d-0d54d43c7939",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP-markdown-xml-demo",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 543,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "5ce4674b-7e5e-4880-9cd6-2322bfd9e789",
+      "project": "-Users-Zhuanz-Projects-SylloOS-Nx",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 2,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "0b6cb97a-ce6a-460b-b8d3-bfd8d8c2ff03",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 235,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "fa5ed747-c7b1-4275-afa4-24093a73af64",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "55d78296-6e0c-4bf2-afd4-bee61286d3fb",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 23,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "2e1cb7bf-48eb-4b5c-8e20-1d449aa6580c",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 548,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "dcaa916a-6e5b-4f2a-80e7-2d8a642e220e",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 9,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a210bf6b-b4bf-4f87-8579-7b31749b9a53",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "576e2834-239f-4f38-9d31-611891662e5c",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 396,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "7a1d310a-db79-494a-a846-e159980f5f19",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "09bdf833-152a-4530-b568-6a1e20ff6bf3",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 425,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "e2cfed2f-e0b9-44c0-b4f7-402a133c13a9",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 4,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a70695bf-eba9-4f3f-b80c-67b3fae4aaed",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 20,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "c69d11cb-9bbc-4628-8c71-560236b8dba6",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 132,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "a63fd45a-0b10-4a94-a51b-89ef0c27aef0",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 15,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "0989f9f1-13e9-4849-a1d8-55b2b7caa661",
+      "project": "-Users-Zhuanz-test",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 26,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "80c548a4-e465-4fea-927a-cd6cac24bd9e",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 14,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "d87bd289-bac3-4bd8-9afa-1c2d8a827bfb",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 48,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "27691b8f-f3be-4bc0-a7eb-77fa991d15d1",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 680,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "f6f363dd-5a36-4734-b6ec-e86f7560a779",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 13,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "8a706acf-85ed-4581-a454-dd886953c7ef",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 31,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    },
+    {
+      "session_id": "e9192f11-d4ae-40bf-adbd-de36438cf3da",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "todos_count": 1,
+      "unique_agents": 1,
+      "has_self_agent": true,
+      "session_records": 29,
+      "time_span_hours": 0.0,
+      "agent_pattern": "single_agent"
+    }
+  ]
+}

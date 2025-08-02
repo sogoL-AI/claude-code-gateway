@@ -1,0 +1,4581 @@
+{
+  "task_id": "T04",
+  "task_name": "Session ID继承机制分析",
+  "generation_time": "2025-08-02T00:00:28.021456",
+  "summary": {
+    "total_sessions": 208,
+    "sessions_with_records": 208,
+    "total_records": 30105
+  },
+  "file_creation_patterns": {
+    "immediate_creation": 0,
+    "delayed_creation": 140,
+    "pre_creation": 0,
+    "timing_differences": [
+      {
+        "session_id": "cae14a76-b2c5-4d82-b905-518a0042511c",
+        "time_diff_seconds": 30873.741162,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "130fe25c-1e60-4284-af63-6de0c007fe88",
+        "time_diff_seconds": 29517.100691,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a0b03bab-a86a-4de1-baed-1788a3c9a122",
+        "time_diff_seconds": 28800.057065,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "05f49da7-3647-40bb-b8be-910fb3bf8045",
+        "time_diff_seconds": 29404.502017,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "8130546b-0321-40e9-ab2e-ffcc8ff44d32",
+        "time_diff_seconds": 28830.472884,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a380817c-b0e5-455b-9be7-566e1916948d",
+        "time_diff_seconds": 35489.077688,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "c8addf61-3167-4235-b22e-d8b9bc16ff95",
+        "time_diff_seconds": 29006.290593,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "2e1cb7bf-48eb-4b5c-8e20-1d449aa6580c",
+        "time_diff_seconds": 37910.675438,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fc1ec0c5-f008-4d67-ac82-f821e854d899",
+        "time_diff_seconds": 33410.812094,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "7be092e0-535b-4e33-8c86-668c368feab5",
+        "time_diff_seconds": 33566.231646,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fec27aae-aacb-42f3-8129-155088f7b593",
+        "time_diff_seconds": 28853.735799,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "d22a64d5-37cd-4cd9-a4b9-850b2d5b32a2",
+        "time_diff_seconds": 28856.158081,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a0adc0f5-609d-494a-b893-fcb2b921fbbf",
+        "time_diff_seconds": 28804.607102,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "7ce31fe3-ca28-4321-b4d5-009e7eab3b87",
+        "time_diff_seconds": 37233.665438,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "f63f812f-8051-41ce-801c-599042f3cdf0",
+        "time_diff_seconds": 29468.721711,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "64cfced8-5ff9-4243-ba83-6d4a94610974",
+        "time_diff_seconds": 43297.829641,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "09206745-7ba3-4950-a1d0-d02ceda223c0",
+        "time_diff_seconds": 36062.581776,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "7a44730b-7351-461f-a34a-3ad0c8542ff3",
+        "time_diff_seconds": 38864.123949,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "576e2834-239f-4f38-9d31-611891662e5c",
+        "time_diff_seconds": 31145.700343,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fd0059b0-d0c9-4015-9cca-b6cb39e3b0e8",
+        "time_diff_seconds": 28803.242677,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "f1783d58-1113-43b0-a15c-3b2a1b766251",
+        "time_diff_seconds": 28833.650669,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "8c044747-9657-4093-95f4-ecaef5895436",
+        "time_diff_seconds": 37548.359434,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "4484cdd7-bcf0-4eb2-9194-bad9eb6367e2",
+        "time_diff_seconds": 32221.526978,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "6a4ca0b5-439d-448c-97a6-c2b08110ed2c",
+        "time_diff_seconds": 29443.05383,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "6cb73adc-4577-45e0-a0f5-6e974b7749d6",
+        "time_diff_seconds": 45045.141686,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "6f9560ff-0b84-43fc-a866-81c36084aeb0",
+        "time_diff_seconds": 32865.117535,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "33dd31dd-497d-4165-8e53-c648e70acab1",
+        "time_diff_seconds": 29176.801614,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "c69d11cb-9bbc-4628-8c71-560236b8dba6",
+        "time_diff_seconds": 35914.664858,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "eb3f24ef-5f6e-4c74-b609-149a82d1a0f5",
+        "time_diff_seconds": 30780.036709,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "57c792ae-6713-45ab-b546-81779b00c3ee",
+        "time_diff_seconds": 29749.643407,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "6cb831b5-3576-4a11-babc-c257769bf69e",
+        "time_diff_seconds": 33453.345343,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "f7e3708c-2e8c-4736-b650-018fd3331dc7",
+        "time_diff_seconds": 33283.208652,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "7ed40852-ec5a-41a6-b517-690d67c30020",
+        "time_diff_seconds": 31979.96683,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "f931d05e-28de-4264-bf3e-e771c62fe34e",
+        "time_diff_seconds": 40335.808409,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "c5bc9dd9-ce50-47b4-b83e-c52137707c97",
+        "time_diff_seconds": 28801.695958,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "138e06e8-801d-404f-ac3f-78bda4566064",
+        "time_diff_seconds": 29067.314743,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fc654c76-9c11-45bb-962a-b940315be3f5",
+        "time_diff_seconds": 29224.078753,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "43586f6d-863a-4166-954e-28468bbe98ef",
+        "time_diff_seconds": 30878.601096,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "c986c3dd-1325-4d20-bbdf-0443fea43188",
+        "time_diff_seconds": 36125.808577,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "040edb11-859c-4335-99d8-f3aa2b91a00d",
+        "time_diff_seconds": 31810.874229,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a0afa2ed-7358-48db-a8a4-35270ab72086",
+        "time_diff_seconds": 35929.272189,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "235a0396-bf98-4e62-a198-7c9c016ff503",
+        "time_diff_seconds": 36624.464441,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "0584bb4b-bf08-4a63-803b-77bca573cd6e",
+        "time_diff_seconds": 29156.431014,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "2cc0031a-ab3a-4010-90f6-274aaba3a641",
+        "time_diff_seconds": 29520.666933,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "0605eca9-9ed4-4f0f-bbe3-2db3531a04ef",
+        "time_diff_seconds": 29604.297451,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "827f0bef-131e-44cf-9716-92932a133da3",
+        "time_diff_seconds": 41893.206763,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "8bd104f8-00a2-46b5-bc8b-b02633b43340",
+        "time_diff_seconds": 29775.122457,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "18dbe83d-b825-46d3-881d-062da89131c7",
+        "time_diff_seconds": 77603.789742,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "afe4a221-e1a8-402f-ac30-29d656eac193",
+        "time_diff_seconds": 41116.468877,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "9dbcbbc5-cfce-4980-a35c-b8ba52d4a53e",
+        "time_diff_seconds": 29892.634618,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "5ce4674b-7e5e-4880-9cd6-2322bfd9e789",
+        "time_diff_seconds": 28800.119525,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "430a8d2f-64a8-4f7e-b4f8-31181067f501",
+        "time_diff_seconds": 31944.683407,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "241edac7-88e0-4028-8f09-440719b4ac33",
+        "time_diff_seconds": 32227.265631,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "2c7b497a-105f-4126-b3fb-7ea0c052d62e",
+        "time_diff_seconds": 28914.079734,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "e022064f-5f6d-4905-9fd6-74ce414e9bf8",
+        "time_diff_seconds": 33332.200737,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "9513af10-89cc-41a5-918c-7f868b2dfe93",
+        "time_diff_seconds": 36307.060398,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fc841eab-9d40-4dad-a64d-0d54d43c7939",
+        "time_diff_seconds": 32457.672423,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "ecfc9be2-d93b-4936-8736-0a7315086e49",
+        "time_diff_seconds": 29156.074322,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fa5ed747-c7b1-4275-afa4-24093a73af64",
+        "time_diff_seconds": 28810.594044,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "d12b30e2-e26c-4107-8ed4-688634c6f4ec",
+        "time_diff_seconds": 28809.133928,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "1475627d-1bf2-400a-aadc-06db8481d01c",
+        "time_diff_seconds": 28813.806395,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "2972cb06-98c7-46fd-8f1e-c15d50eaf600",
+        "time_diff_seconds": 28805.959967,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a210bf6b-b4bf-4f87-8579-7b31749b9a53",
+        "time_diff_seconds": 28805.627243,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "46e4cfad-fc32-4828-a3a1-69d2624839bc",
+        "time_diff_seconds": 28813.769411,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "10c028bd-bf40-4136-b58d-9ba174181a4c",
+        "time_diff_seconds": 28823.333646,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "287a532e-c0a4-408a-af55-6ac392fb9da1",
+        "time_diff_seconds": 28810.94801,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fdcb7861-6a1f-459a-9fc5-651b5f34b7c3",
+        "time_diff_seconds": 80406.595551,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "aff67aea-cb9a-4b1a-a326-4b4c0e61d8ca",
+        "time_diff_seconds": 36039.118595,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "7a642424-c201-4b60-99cc-5b287b12328f",
+        "time_diff_seconds": 41269.904127,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "c0aef192-9e05-4f22-8fbf-ab9d3d48712b",
+        "time_diff_seconds": 28808.872617,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "7a1d310a-db79-494a-a846-e159980f5f19",
+        "time_diff_seconds": 28809.360309,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "918ecad7-4d6b-497f-a887-204457e13e93",
+        "time_diff_seconds": 28810.603301,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fc694624-b4f1-4b4c-a1ab-38dba9038652",
+        "time_diff_seconds": 28865.478438,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "63311ead-3bdc-4e3d-a73a-10e4ecda6102",
+        "time_diff_seconds": 30766.836061,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "f2170e9c-be83-4fb4-bd8c-32fc2b17212a",
+        "time_diff_seconds": 29535.173877,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "1d793148-944a-4aa8-b501-ce46e819df92",
+        "time_diff_seconds": 29002.685184,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "cba4974e-262e-4ff9-8485-05a34f206d38",
+        "time_diff_seconds": 28802.103011,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "0989f9f1-13e9-4849-a1d8-55b2b7caa661",
+        "time_diff_seconds": 29436.762889,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "865796df-262e-40d9-8d2d-e550cc68b524",
+        "time_diff_seconds": 33208.908544,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "b06dcb3c-a476-4990-b059-fa6ea2c2af9f",
+        "time_diff_seconds": 28847.324492,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "1d9b276f-a1e4-4617-8748-e4a04bea3bc9",
+        "time_diff_seconds": 30531.880432,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "679d5575-8d2c-4c80-9ed0-e88a58b9667d",
+        "time_diff_seconds": 29300.039251,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "d11175b2-2c92-493e-a7e0-f0e6dbcd103e",
+        "time_diff_seconds": 28831.262507,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "33ec5df3-edb7-486a-b7f9-7682ad2322e8",
+        "time_diff_seconds": 28804.359944,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "c829cb3b-821e-4e1b-91e2-43133bd10e05",
+        "time_diff_seconds": 28854.1361,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a70695bf-eba9-4f3f-b80c-67b3fae4aaed",
+        "time_diff_seconds": 28900.194037,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "99c77e74-a0b9-4201-8664-6215ee64c25f",
+        "time_diff_seconds": 30656.307209,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "188bbb8b-1885-4140-9a37-aa1cfac601b6",
+        "time_diff_seconds": 28812.613782,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "628538ae-e08e-4e4e-bd35-79eafcc54557",
+        "time_diff_seconds": 28812.485399,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "3b8b513c-fff2-4bd6-880b-b77d4270ef2e",
+        "time_diff_seconds": 103131.586833,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "80c548a4-e465-4fea-927a-cd6cac24bd9e",
+        "time_diff_seconds": 28831.892442,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "f6f363dd-5a36-4734-b6ec-e86f7560a779",
+        "time_diff_seconds": 28815.603062,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "e2cfed2f-e0b9-44c0-b4f7-402a133c13a9",
+        "time_diff_seconds": 28809.461838,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "d3923380-e17f-4fbf-ba9c-1878115b9225",
+        "time_diff_seconds": 28804.891218,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a3ddf786-61a7-49bc-8d39-42aa931c282a",
+        "time_diff_seconds": 30108.823467,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "b2e386a1-355d-461f-b67c-b646ab44ca3c",
+        "time_diff_seconds": 34178.88376,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "32798515-c4e6-41cb-bb0e-ab0f15c2ebcd",
+        "time_diff_seconds": 36945.318912,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "27691b8f-f3be-4bc0-a7eb-77fa991d15d1",
+        "time_diff_seconds": 61134.154239,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "159bf79b-a113-4d47-998c-e05e42e3e0cf",
+        "time_diff_seconds": 34518.608084,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "58eb0e5f-1fe8-436e-8db8-7045edcc0d0d",
+        "time_diff_seconds": 33761.844455,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "7c15faee-2f71-4963-875c-a6811fa90f04",
+        "time_diff_seconds": 29113.232453,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "2c5a96b1-c8c0-424a-8853-11c673dad4e5",
+        "time_diff_seconds": 34438.707211,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a2fe0bca-1291-4a00-8b23-6c4386085ef5",
+        "time_diff_seconds": 28934.233912,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "450fb370-d97a-450e-9fc6-3c09f07b2d23",
+        "time_diff_seconds": 42770.1691,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "b35e3cd9-f402-44c0-80e8-13192d212283",
+        "time_diff_seconds": 28800.144779,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "f777f485-c4ce-40ab-8541-4ed073beb900",
+        "time_diff_seconds": 33314.046396,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "d0c37520-bd4b-4136-9e21-5091bc3513d1",
+        "time_diff_seconds": 31459.985855,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "04d4b352-04af-447e-8824-17bee4986d7f",
+        "time_diff_seconds": 34829.563218,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "06d02a12-48a4-4b33-b80e-f60f547c388e",
+        "time_diff_seconds": 36080.20054,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "90790431-6c8b-42f5-a000-d75a1a8d60a7",
+        "time_diff_seconds": 34772.658863,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "793f2fb0-7b9f-411d-9b43-52177ae96ada",
+        "time_diff_seconds": 30442.465686,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "13b33516-f174-4c12-b5c5-42329c8b5691",
+        "time_diff_seconds": 89364.321184,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "0b6cb97a-ce6a-460b-b8d3-bfd8d8c2ff03",
+        "time_diff_seconds": 32017.23964,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "a252cefe-9a41-4131-b1fc-857bb2abfc25",
+        "time_diff_seconds": 34319.793626,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fa4e59e8-9384-4f6d-b3b6-6934058f3d88",
+        "time_diff_seconds": 32331.032391,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "74664bc9-8567-42d1-9e58-a992d3f61d34",
+        "time_diff_seconds": 28806.437041,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "36b38126-9a92-4aa1-af2f-1f78e1c3f2e8",
+        "time_diff_seconds": 33988.040318,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "33388ab0-8873-4c26-93ba-ea978b2f0f7e",
+        "time_diff_seconds": 29368.496326,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "0e2340ec-42e1-48a7-b29e-a28c89b0cbc3",
+        "time_diff_seconds": 64104.39405,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "82ff90b6-83f0-4fd7-80ae-c9fd872fe03c",
+        "time_diff_seconds": 40183.664294,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "e2f1de22-e024-4b26-86ee-feb1eeb731f6",
+        "time_diff_seconds": 30240.905988,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "32e73983-87d3-4862-ac3c-d5aac458e4b0",
+        "time_diff_seconds": 33098.321632,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "bbf6af0a-8653-48c1-986a-a977824f62e3",
+        "time_diff_seconds": 40104.593266,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "57bb26a3-62ae-47b3-ba5e-b1f0497605c4",
+        "time_diff_seconds": 41608.871413,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "10997c96-e680-4218-a0cf-9b1209a5b2dc",
+        "time_diff_seconds": 29691.897919,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "5b8642f5-7817-4d99-8b6d-4bf5f64eb71d",
+        "time_diff_seconds": 33469.123487,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "e3532d09-4b2c-46a4-9f68-656abc7767a4",
+        "time_diff_seconds": 29693.806048,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "137e4b21-641f-4c6f-b288-ad127c871a24",
+        "time_diff_seconds": 32096.278483,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "55d78296-6e0c-4bf2-afd4-bee61286d3fb",
+        "time_diff_seconds": 29026.898499,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "09bdf833-152a-4530-b568-6a1e20ff6bf3",
+        "time_diff_seconds": 44546.606823,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "ad5e4229-d200-4e96-a55f-0b34cc722121",
+        "time_diff_seconds": 29836.360424,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "f3030658-ae45-4c69-b935-ee36b6cbeb50",
+        "time_diff_seconds": 33224.160246,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "6b3b8624-7145-49e6-ac16-b2ac6f7b1395",
+        "time_diff_seconds": 31559.042064,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "e3ec5aef-4416-45cc-9c00-671ce1824836",
+        "time_diff_seconds": 31272.496273,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "e9192f11-d4ae-40bf-adbd-de36438cf3da",
+        "time_diff_seconds": 29112.103195,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "c4b636c9-ba9f-433d-a844-fb2ae02ec78c",
+        "time_diff_seconds": 31112.516152,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "cd10d11a-105c-4690-a402-1340dee0368d",
+        "time_diff_seconds": 30352.608121,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "d87bd289-bac3-4bd8-9afa-1c2d8a827bfb",
+        "time_diff_seconds": 29098.315326,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "fb140440-f7d2-44b1-bed8-8e3ed40ecf56",
+        "time_diff_seconds": 28885.6823,
+        "pattern": "delayed"
+      },
+      {
+        "session_id": "e134a69b-5b36-4ee1-92f8-1bf8cbbfafa9",
+        "time_diff_seconds": 31420.889179,
+        "pattern": "delayed"
+      }
+    ]
+  },
+  "session_timing_analysis": {
+    "sessions_by_hour": {
+      "7": 12,
+      "8": 19,
+      "9": 15,
+      "10": 11,
+      "11": 10,
+      "12": 8,
+      "13": 15,
+      "14": 22,
+      "15": 5,
+      "16": 13,
+      "5": 1,
+      "6": 5,
+      "17": 4
+    },
+    "session_duration_distribution": {
+      "<6min": 47,
+      "<1hour": 42,
+      "1-6hours": 45,
+      ">6hours": 6
+    },
+    "rapid_succession_sessions": [
+      {
+        "previous_session": "c8addf61-3167-4235-b22e-d8b9bc16ff95",
+        "current_session": "138e06e8-801d-404f-ac3f-78bda4566064",
+        "time_gap_seconds": 116.788,
+        "same_project": false
+      },
+      {
+        "previous_session": "138e06e8-801d-404f-ac3f-78bda4566064",
+        "current_session": "a0b03bab-a86a-4de1-baed-1788a3c9a122",
+        "time_gap_seconds": 114.146,
+        "same_project": false
+      },
+      {
+        "previous_session": "a0b03bab-a86a-4de1-baed-1788a3c9a122",
+        "current_session": "05f49da7-3647-40bb-b8be-910fb3bf8045",
+        "time_gap_seconds": 9.478,
+        "same_project": true
+      },
+      {
+        "previous_session": "a0adc0f5-609d-494a-b893-fcb2b921fbbf",
+        "current_session": "7be092e0-535b-4e33-8c86-668c368feab5",
+        "time_gap_seconds": 18.645,
+        "same_project": true
+      },
+      {
+        "previous_session": "7be092e0-535b-4e33-8c86-668c368feab5",
+        "current_session": "7ce31fe3-ca28-4321-b4d5-009e7eab3b87",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "7ce31fe3-ca28-4321-b4d5-009e7eab3b87",
+        "current_session": "fc654c76-9c11-45bb-962a-b940315be3f5",
+        "time_gap_seconds": 218.019,
+        "same_project": false
+      },
+      {
+        "previous_session": "8130546b-0321-40e9-ab2e-ffcc8ff44d32",
+        "current_session": "d22a64d5-37cd-4cd9-a4b9-850b2d5b32a2",
+        "time_gap_seconds": 42.193,
+        "same_project": true
+      },
+      {
+        "previous_session": "fd0059b0-d0c9-4015-9cca-b6cb39e3b0e8",
+        "current_session": "040edb11-859c-4335-99d8-f3aa2b91a00d",
+        "time_gap_seconds": 17.281,
+        "same_project": true
+      },
+      {
+        "previous_session": "040edb11-859c-4335-99d8-f3aa2b91a00d",
+        "current_session": "33dd31dd-497d-4165-8e53-c648e70acab1",
+        "time_gap_seconds": 19.861,
+        "same_project": true
+      },
+      {
+        "previous_session": "a380817c-b0e5-455b-9be7-566e1916948d",
+        "current_session": "2e1cb7bf-48eb-4b5c-8e20-1d449aa6580c",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "4484cdd7-bcf0-4eb2-9194-bad9eb6367e2",
+        "current_session": "f7e3708c-2e8c-4736-b650-018fd3331dc7",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "f7e3708c-2e8c-4736-b650-018fd3331dc7",
+        "current_session": "a0afa2ed-7358-48db-a8a4-35270ab72086",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "a0afa2ed-7358-48db-a8a4-35270ab72086",
+        "current_session": "0605eca9-9ed4-4f0f-bbe3-2db3531a04ef",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "80c548a4-e465-4fea-927a-cd6cac24bd9e",
+        "current_session": "f6f363dd-5a36-4734-b6ec-e86f7560a779",
+        "time_gap_seconds": 36.975,
+        "same_project": true
+      },
+      {
+        "previous_session": "f6f363dd-5a36-4734-b6ec-e86f7560a779",
+        "current_session": "d3923380-e17f-4fbf-ba9c-1878115b9225",
+        "time_gap_seconds": 31.985,
+        "same_project": true
+      },
+      {
+        "previous_session": "d3923380-e17f-4fbf-ba9c-1878115b9225",
+        "current_session": "e2cfed2f-e0b9-44c0-b4f7-402a133c13a9",
+        "time_gap_seconds": 35.255,
+        "same_project": true
+      },
+      {
+        "previous_session": "9dbcbbc5-cfce-4980-a35c-b8ba52d4a53e",
+        "current_session": "33ec5df3-edb7-486a-b7f9-7682ad2322e8",
+        "time_gap_seconds": 67.884,
+        "same_project": false
+      },
+      {
+        "previous_session": "f63f812f-8051-41ce-801c-599042f3cdf0",
+        "current_session": "6cb831b5-3576-4a11-babc-c257769bf69e",
+        "time_gap_seconds": 134.385,
+        "same_project": false
+      },
+      {
+        "previous_session": "6cb831b5-3576-4a11-babc-c257769bf69e",
+        "current_session": "7ed40852-ec5a-41a6-b517-690d67c30020",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "43586f6d-863a-4166-954e-28468bbe98ef",
+        "current_session": "18dbe83d-b825-46d3-881d-062da89131c7",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "c5bc9dd9-ce50-47b4-b83e-c52137707c97",
+        "current_session": "57c792ae-6713-45ab-b546-81779b00c3ee",
+        "time_gap_seconds": 4.963,
+        "same_project": true
+      },
+      {
+        "previous_session": "7a44730b-7351-461f-a34a-3ad0c8542ff3",
+        "current_session": "8c044747-9657-4093-95f4-ecaef5895436",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "8c044747-9657-4093-95f4-ecaef5895436",
+        "current_session": "6cb73adc-4577-45e0-a0f5-6e974b7749d6",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "6cb73adc-4577-45e0-a0f5-6e974b7749d6",
+        "current_session": "eb3f24ef-5f6e-4c74-b609-149a82d1a0f5",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "eb3f24ef-5f6e-4c74-b609-149a82d1a0f5",
+        "current_session": "f931d05e-28de-4264-bf3e-e771c62fe34e",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "f931d05e-28de-4264-bf3e-e771c62fe34e",
+        "current_session": "827f0bef-131e-44cf-9716-92932a133da3",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "827f0bef-131e-44cf-9716-92932a133da3",
+        "current_session": "afe4a221-e1a8-402f-ac30-29d656eac193",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "6a4ca0b5-439d-448c-97a6-c2b08110ed2c",
+        "current_session": "6f9560ff-0b84-43fc-a866-81c36084aeb0",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "6f9560ff-0b84-43fc-a866-81c36084aeb0",
+        "current_session": "c69d11cb-9bbc-4628-8c71-560236b8dba6",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "c69d11cb-9bbc-4628-8c71-560236b8dba6",
+        "current_session": "c986c3dd-1325-4d20-bbdf-0443fea43188",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "c986c3dd-1325-4d20-bbdf-0443fea43188",
+        "current_session": "8bd104f8-00a2-46b5-bc8b-b02633b43340",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "8bd104f8-00a2-46b5-bc8b-b02633b43340",
+        "current_session": "fc841eab-9d40-4dad-a64d-0d54d43c7939",
+        "time_gap_seconds": 63.937,
+        "same_project": false
+      },
+      {
+        "previous_session": "241edac7-88e0-4028-8f09-440719b4ac33",
+        "current_session": "2c7b497a-105f-4126-b3fb-7ea0c052d62e",
+        "time_gap_seconds": 73.416,
+        "same_project": true
+      },
+      {
+        "previous_session": "576e2834-239f-4f38-9d31-611891662e5c",
+        "current_session": "f1783d58-1113-43b0-a15c-3b2a1b766251",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "64cfced8-5ff9-4243-ba83-6d4a94610974",
+        "current_session": "09206745-7ba3-4950-a1d0-d02ceda223c0",
+        "time_gap_seconds": 14.343,
+        "same_project": true
+      },
+      {
+        "previous_session": "3b8b513c-fff2-4bd6-880b-b77d4270ef2e",
+        "current_session": "f2170e9c-be83-4fb4-bd8c-32fc2b17212a",
+        "time_gap_seconds": 284.766,
+        "same_project": false
+      },
+      {
+        "previous_session": "f2170e9c-be83-4fb4-bd8c-32fc2b17212a",
+        "current_session": "0989f9f1-13e9-4849-a1d8-55b2b7caa661",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "0989f9f1-13e9-4849-a1d8-55b2b7caa661",
+        "current_session": "865796df-262e-40d9-8d2d-e550cc68b524",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "865796df-262e-40d9-8d2d-e550cc68b524",
+        "current_session": "1d9b276f-a1e4-4617-8748-e4a04bea3bc9",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "1d9b276f-a1e4-4617-8748-e4a04bea3bc9",
+        "current_session": "99c77e74-a0b9-4201-8664-6215ee64c25f",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "99c77e74-a0b9-4201-8664-6215ee64c25f",
+        "current_session": "679d5575-8d2c-4c80-9ed0-e88a58b9667d",
+        "time_gap_seconds": 20.305,
+        "same_project": true
+      },
+      {
+        "previous_session": "58eb0e5f-1fe8-436e-8db8-7045edcc0d0d",
+        "current_session": "a252cefe-9a41-4131-b1fc-857bb2abfc25",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "a252cefe-9a41-4131-b1fc-857bb2abfc25",
+        "current_session": "0b6cb97a-ce6a-460b-b8d3-bfd8d8c2ff03",
+        "time_gap_seconds": 76.015,
+        "same_project": true
+      },
+      {
+        "previous_session": "32798515-c4e6-41cb-bb0e-ab0f15c2ebcd",
+        "current_session": "159bf79b-a113-4d47-998c-e05e42e3e0cf",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "159bf79b-a113-4d47-998c-e05e42e3e0cf",
+        "current_session": "06d02a12-48a4-4b33-b80e-f60f547c388e",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "b35e3cd9-f402-44c0-80e8-13192d212283",
+        "current_session": "b2e386a1-355d-461f-b67c-b646ab44ca3c",
+        "time_gap_seconds": 226.463,
+        "same_project": true
+      },
+      {
+        "previous_session": "b2e386a1-355d-461f-b67c-b646ab44ca3c",
+        "current_session": "2c5a96b1-c8c0-424a-8853-11c673dad4e5",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "2c5a96b1-c8c0-424a-8853-11c673dad4e5",
+        "current_session": "f777f485-c4ce-40ab-8541-4ed073beb900",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "f777f485-c4ce-40ab-8541-4ed073beb900",
+        "current_session": "d0c37520-bd4b-4136-9e21-5091bc3513d1",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "d0c37520-bd4b-4136-9e21-5091bc3513d1",
+        "current_session": "fa4e59e8-9384-4f6d-b3b6-6934058f3d88",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "fa4e59e8-9384-4f6d-b3b6-6934058f3d88",
+        "current_session": "a2fe0bca-1291-4a00-8b23-6c4386085ef5",
+        "time_gap_seconds": 170.425,
+        "same_project": true
+      },
+      {
+        "previous_session": "a2fe0bca-1291-4a00-8b23-6c4386085ef5",
+        "current_session": "5ce4674b-7e5e-4880-9cd6-2322bfd9e789",
+        "time_gap_seconds": 69.355,
+        "same_project": false
+      },
+      {
+        "previous_session": "04d4b352-04af-447e-8824-17bee4986d7f",
+        "current_session": "450fb370-d97a-450e-9fc6-3c09f07b2d23",
+        "time_gap_seconds": 241.03,
+        "same_project": true
+      },
+      {
+        "previous_session": "a210bf6b-b4bf-4f87-8579-7b31749b9a53",
+        "current_session": "46e4cfad-fc32-4828-a3a1-69d2624839bc",
+        "time_gap_seconds": 56.389,
+        "same_project": true
+      },
+      {
+        "previous_session": "46e4cfad-fc32-4828-a3a1-69d2624839bc",
+        "current_session": "2972cb06-98c7-46fd-8f1e-c15d50eaf600",
+        "time_gap_seconds": 106.878,
+        "same_project": true
+      },
+      {
+        "previous_session": "2972cb06-98c7-46fd-8f1e-c15d50eaf600",
+        "current_session": "1475627d-1bf2-400a-aadc-06db8481d01c",
+        "time_gap_seconds": 98.036,
+        "same_project": true
+      },
+      {
+        "previous_session": "287a532e-c0a4-408a-af55-6ac392fb9da1",
+        "current_session": "fa5ed747-c7b1-4275-afa4-24093a73af64",
+        "time_gap_seconds": 33.147,
+        "same_project": true
+      },
+      {
+        "previous_session": "fa5ed747-c7b1-4275-afa4-24093a73af64",
+        "current_session": "d12b30e2-e26c-4107-8ed4-688634c6f4ec",
+        "time_gap_seconds": 33.518,
+        "same_project": true
+      },
+      {
+        "previous_session": "36b38126-9a92-4aa1-af2f-1f78e1c3f2e8",
+        "current_session": "82ff90b6-83f0-4fd7-80ae-c9fd872fe03c",
+        "time_gap_seconds": 198.758,
+        "same_project": true
+      },
+      {
+        "previous_session": "82ff90b6-83f0-4fd7-80ae-c9fd872fe03c",
+        "current_session": "bbf6af0a-8653-48c1-986a-a977824f62e3",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "c4b636c9-ba9f-433d-a844-fb2ae02ec78c",
+        "current_session": "e134a69b-5b36-4ee1-92f8-1bf8cbbfafa9",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "cd10d11a-105c-4690-a402-1340dee0368d",
+        "current_session": "09bdf833-152a-4530-b568-6a1e20ff6bf3",
+        "time_gap_seconds": 82.983,
+        "same_project": true
+      },
+      {
+        "previous_session": "33388ab0-8873-4c26-93ba-ea978b2f0f7e",
+        "current_session": "5b8642f5-7817-4d99-8b6d-4bf5f64eb71d",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "32e73983-87d3-4862-ac3c-d5aac458e4b0",
+        "current_session": "57bb26a3-62ae-47b3-ba5e-b1f0497605c4",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "fb140440-f7d2-44b1-bed8-8e3ed40ecf56",
+        "current_session": "f3030658-ae45-4c69-b935-ee36b6cbeb50",
+        "time_gap_seconds": 89.804,
+        "same_project": true
+      },
+      {
+        "previous_session": "f3030658-ae45-4c69-b935-ee36b6cbeb50",
+        "current_session": "e3ec5aef-4416-45cc-9c00-671ce1824836",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "e3ec5aef-4416-45cc-9c00-671ce1824836",
+        "current_session": "e9192f11-d4ae-40bf-adbd-de36438cf3da",
+        "time_gap_seconds": 2.207,
+        "same_project": true
+      },
+      {
+        "previous_session": "55d78296-6e0c-4bf2-afd4-bee61286d3fb",
+        "current_session": "e2f1de22-e024-4b26-86ee-feb1eeb731f6",
+        "time_gap_seconds": 105.557,
+        "same_project": true
+      },
+      {
+        "previous_session": "e2f1de22-e024-4b26-86ee-feb1eeb731f6",
+        "current_session": "137e4b21-641f-4c6f-b288-ad127c871a24",
+        "time_gap_seconds": 0.0,
+        "same_project": true
+      },
+      {
+        "previous_session": "793f2fb0-7b9f-411d-9b43-52177ae96ada",
+        "current_session": "10997c96-e680-4218-a0cf-9b1209a5b2dc",
+        "time_gap_seconds": 266.059,
+        "same_project": false
+      },
+      {
+        "previous_session": "e3532d09-4b2c-46a4-9f68-656abc7767a4",
+        "current_session": "d87bd289-bac3-4bd8-9afa-1c2d8a827bfb",
+        "time_gap_seconds": 184.293,
+        "same_project": false
+      },
+      {
+        "previous_session": "918ecad7-4d6b-497f-a887-204457e13e93",
+        "current_session": "7a1d310a-db79-494a-a846-e159980f5f19",
+        "time_gap_seconds": 94.909,
+        "same_project": true
+      }
+    ]
+  },
+  "inheritance_indicators": [],
+  "storage_behavior_analysis": {
+    "new_file_creation": 68,
+    "file_continuation": 140
+  },
+  "potential_continuations": [
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "c8addf61-3167-4235-b22e-d8b9bc16ff95",
+      "current_session": "a0b03bab-a86a-4de1-baed-1788a3c9a122",
+      "gap_minutes": 0.41118333333333335,
+      "context_preservation_score": 1.0
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "a0b03bab-a86a-4de1-baed-1788a3c9a122",
+      "current_session": "05f49da7-3647-40bb-b8be-910fb3bf8045",
+      "gap_minutes": 0.1575666666666667,
+      "context_preservation_score": 1.0
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "05f49da7-3647-40bb-b8be-910fb3bf8045",
+      "current_session": "a0adc0f5-609d-494a-b893-fcb2b921fbbf",
+      "gap_minutes": 0.07861666666666665,
+      "context_preservation_score": 1.0
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "a0adc0f5-609d-494a-b893-fcb2b921fbbf",
+      "current_session": "7be092e0-535b-4e33-8c86-668c368feab5",
+      "gap_minutes": 0.2343,
+      "context_preservation_score": 0.7
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "7be092e0-535b-4e33-8c86-668c368feab5",
+      "current_session": "7ce31fe3-ca28-4321-b4d5-009e7eab3b87",
+      "gap_minutes": -79.43675,
+      "context_preservation_score": 0.7
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "7ce31fe3-ca28-4321-b4d5-009e7eab3b87",
+      "current_session": "8130546b-0321-40e9-ab2e-ffcc8ff44d32",
+      "gap_minutes": -129.74998333333332,
+      "context_preservation_score": 0.7
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "8130546b-0321-40e9-ab2e-ffcc8ff44d32",
+      "current_session": "d22a64d5-37cd-4cd9-a4b9-850b2d5b32a2",
+      "gap_minutes": 0.19560000000000002,
+      "context_preservation_score": 1.0
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "d22a64d5-37cd-4cd9-a4b9-850b2d5b32a2",
+      "current_session": "fec27aae-aacb-42f3-8129-155088f7b593",
+      "gap_minutes": 9.160016666666667,
+      "context_preservation_score": 0.8999999999999999
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "a380817c-b0e5-455b-9be7-566e1916948d",
+      "current_session": "2e1cb7bf-48eb-4b5c-8e20-1d449aa6580c",
+      "gap_minutes": -111.48391666666666,
+      "context_preservation_score": 1.0
+    },
+    {
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "previous_session": "2e1cb7bf-48eb-4b5c-8e20-1d449aa6580c",
+      "current_session": "fc1ec0c5-f008-4d67-ac82-f821e854d899",
+      "gap_minutes": 36.944516666666665,
+      "context_preservation_score": 0.6
+    }
+  ],
+  "session_details": [
+    {
+      "session_id": "13b33516-f174-4c12-b5c5-42329c8b5691",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T17:15:00.622184",
+      "first_record_time": "2025-07-30T16:25:36.301000",
+      "last_record_time": "2025-07-31T09:14:55.179000",
+      "record_count": 2903,
+      "file_size": 28780760,
+      "time_span_hours": 16.821910555555554,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "long_session"
+    },
+    {
+      "session_id": "0e2340ec-42e1-48a7-b29e-a28c89b0cbc3",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-02T00:00:20.577050",
+      "first_record_time": "2025-08-01T06:11:56.183000",
+      "last_record_time": "2025-08-01T16:00:20.541000",
+      "record_count": 2001,
+      "file_size": 7042647,
+      "time_span_hours": 9.806766111111111,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "long_session"
+    },
+    {
+      "session_id": "9513af10-89cc-41a5-918c-7f868b2dfe93",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP-markdown-xml-demo",
+      "file_modified": "2025-07-29T20:24:59.542398",
+      "first_record_time": "2025-07-29T10:19:52.482000",
+      "last_record_time": "2025-07-29T12:24:59.515000",
+      "record_count": 1086,
+      "file_size": 7420131,
+      "time_span_hours": 2.0852869444444444,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "7a642424-c201-4b60-99cc-5b287b12328f",
+      "project": "-Users-Zhuanz-Projects-DocHunter",
+      "file_modified": "2025-08-01T01:06:42.769127",
+      "first_record_time": "2025-07-31T13:38:52.865000",
+      "last_record_time": "2025-07-31T17:06:42.750000",
+      "record_count": 993,
+      "file_size": 2875611,
+      "time_span_hours": 3.4638569444444447,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "62c1d209-e788-4abe-b631-ea72f2a1aeb0",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-29T00:10:53.998084",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T16:10:53.967000",
+      "record_count": 728,
+      "file_size": 3478303,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "700b48b9-204d-4599-8114-ba0d6287da73",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "file_modified": "2025-07-30T16:04:47.061866",
+      "first_record_time": null,
+      "last_record_time": "2025-07-30T08:04:47.019000",
+      "record_count": 694,
+      "file_size": 1556847,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "27691b8f-f3be-4bc0-a7eb-77fa991d15d1",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-08-01T23:42:13.832239",
+      "first_record_time": "2025-08-01T06:43:19.678000",
+      "last_record_time": "2025-08-01T15:42:13.809000",
+      "record_count": 680,
+      "file_size": 1726105,
+      "time_span_hours": 8.981703055555556,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "long_session"
+    },
+    {
+      "session_id": "09206745-7ba3-4950-a1d0-d02ceda223c0",
+      "project": "-Users-Zhuanz-Projects-nx-project",
+      "file_modified": "2025-07-30T17:39:56.225776",
+      "first_record_time": "2025-07-30T07:38:53.644000",
+      "last_record_time": "2025-07-30T09:39:56.173000",
+      "record_count": 628,
+      "file_size": 1233440,
+      "time_span_hours": 2.0173691666666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "159bf79b-a113-4d47-998c-e05e42e3e0cf",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T00:00:45.012084",
+      "first_record_time": "2025-07-30T14:25:26.404000",
+      "last_record_time": "2025-07-30T16:00:40.624000",
+      "record_count": 608,
+      "file_size": 4915246,
+      "time_span_hours": 1.5872833333333334,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "2e1cb7bf-48eb-4b5c-8e20-1d449aa6580c",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T21:51:31.980438",
+      "first_record_time": "2025-07-28T11:19:41.305000",
+      "last_record_time": "2025-07-28T13:51:31.921000",
+      "record_count": 548,
+      "file_size": 1267844,
+      "time_span_hours": 2.530726666666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "fc841eab-9d40-4dad-a64d-0d54d43c7939",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP-markdown-xml-demo",
+      "file_modified": "2025-07-29T22:03:27.428423",
+      "first_record_time": "2025-07-29T13:02:29.756000",
+      "last_record_time": "2025-07-29T14:03:27.371000",
+      "record_count": 543,
+      "file_size": 1121448,
+      "time_span_hours": 1.0160041666666666,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "aff67aea-cb9a-4b1a-a326-4b4c0e61d8ca",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "file_modified": "2025-07-30T17:27:16.065595",
+      "first_record_time": "2025-07-30T07:26:36.947000",
+      "last_record_time": "2025-07-30T09:27:16.025000",
+      "record_count": 521,
+      "file_size": 2063443,
+      "time_span_hours": 2.0108550000000003,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "57bb26a3-62ae-47b3-ba5e-b1f0497605c4",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T00:27:44.971413",
+      "first_record_time": "2025-07-31T12:54:16.100000",
+      "last_record_time": "2025-07-31T16:27:44.945000",
+      "record_count": 496,
+      "file_size": 1300519,
+      "time_span_hours": 3.5580125,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "dbeb4cbf-7160-4f9c-a28e-7692bdaf0d7f",
+      "project": "-Users-Zhuanz-Projects-Syllo",
+      "file_modified": "2025-07-30T00:47:05.090902",
+      "first_record_time": null,
+      "last_record_time": "2025-07-29T16:47:05.037000",
+      "record_count": 489,
+      "file_size": 874893,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "bbf6af0a-8653-48c1-986a-a977824f62e3",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-07-31T20:42:41.916266",
+      "first_record_time": "2025-07-31T09:34:17.323000",
+      "last_record_time": "2025-07-31T12:42:41.887000",
+      "record_count": 463,
+      "file_size": 1673221,
+      "time_span_hours": 3.140156666666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "09bdf833-152a-4530-b568-6a1e20ff6bf3",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T00:14:45.985823",
+      "first_record_time": "2025-07-31T11:52:19.379000",
+      "last_record_time": "2025-07-31T16:14:45.816000",
+      "record_count": 425,
+      "file_size": 1672814,
+      "time_span_hours": 4.374010277777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "2ebc58b2-9dba-4052-8ed7-76f46283bafa",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-08-01T01:30:08.774576",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T17:30:08.726000",
+      "record_count": 415,
+      "file_size": 1325210,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "793f2fb0-7b9f-411d-9b43-52177ae96ada",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-08-01T01:55:19.262686",
+      "first_record_time": "2025-07-31T17:27:56.797000",
+      "last_record_time": "2025-07-31T17:55:19.221000",
+      "record_count": 409,
+      "file_size": 931394,
+      "time_span_hours": 0.4562288888888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "e022064f-5f6d-4905-9fd6-74ce414e9bf8",
+      "project": "-Users-Zhuanz-mmd-files",
+      "file_modified": "2025-07-29T23:43:53.664737",
+      "first_record_time": "2025-07-29T14:28:21.464000",
+      "last_record_time": "2025-07-29T15:43:53.620000",
+      "record_count": 398,
+      "file_size": 1124744,
+      "time_span_hours": 1.2589322222222221,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "576e2834-239f-4f38-9d31-611891662e5c",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T23:51:40.982343",
+      "first_record_time": "2025-07-29T15:12:35.282000",
+      "last_record_time": "2025-07-29T15:51:40.932000",
+      "record_count": 396,
+      "file_size": 1256115,
+      "time_span_hours": 0.6515694444444444,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "a380817c-b0e5-455b-9be7-566e1916948d",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T21:11:10.382688",
+      "first_record_time": "2025-07-28T11:19:41.305000",
+      "last_record_time": "2025-07-28T13:11:10.340000",
+      "record_count": 387,
+      "file_size": 899154,
+      "time_span_hours": 1.8580652777777777,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "e3532d09-4b2c-46a4-9f68-656abc7767a4",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T02:02:12.526048",
+      "first_record_time": "2025-07-31T17:47:18.720000",
+      "last_record_time": "2025-07-31T18:02:12.484000",
+      "record_count": 387,
+      "file_size": 920292,
+      "time_span_hours": 0.24826777777777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "6f64f295-0441-47ed-97df-35cb2226bd20",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T18:03:12.912675",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T10:03:12.869000",
+      "record_count": 383,
+      "file_size": 841480,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "6cb73adc-4577-45e0-a0f5-6e974b7749d6",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T20:48:31.688686",
+      "first_record_time": "2025-07-29T08:17:46.547000",
+      "last_record_time": "2025-07-29T12:48:31.669000",
+      "record_count": 382,
+      "file_size": 1276162,
+      "time_span_hours": 4.512533888888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "8c044747-9657-4093-95f4-ecaef5895436",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T18:43:34.906434",
+      "first_record_time": "2025-07-29T08:17:46.547000",
+      "last_record_time": "2025-07-29T10:43:34.867000",
+      "record_count": 374,
+      "file_size": 2243247,
+      "time_span_hours": 2.4300888888888887,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "fc425842-ea66-4b00-a873-7b312d268f88",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T15:18:56.712516",
+      "first_record_time": null,
+      "last_record_time": "2025-07-29T07:18:56.670000",
+      "record_count": 367,
+      "file_size": 1179444,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "ed8db256-c961-4b56-9d00-e67809765883",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-07-31T19:05:36.690067",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T11:05:36.580000",
+      "record_count": 349,
+      "file_size": 1334805,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "be5c89ea-985d-4c43-9c6a-cf6150d7a8f3",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP-markdown-xml-demo",
+      "file_modified": "2025-07-29T20:51:37.338371",
+      "first_record_time": null,
+      "last_record_time": "2025-07-29T12:51:37.300000",
+      "record_count": 347,
+      "file_size": 750207,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "a8b3ebe9-ae9e-43a8-a110-54f67fd9b1f2",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T16:11:24.734028",
+      "first_record_time": null,
+      "last_record_time": "2025-07-29T08:11:24.692000",
+      "record_count": 328,
+      "file_size": 1105791,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "2d13cf76-e224-479d-b674-4ce58cb4fe9d",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T00:37:31.052228",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T16:37:31.007000",
+      "record_count": 324,
+      "file_size": 1128580,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fc1ec0c5-f008-4d67-ac82-f821e854d899",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T23:45:19.404094",
+      "first_record_time": "2025-07-28T14:28:28.592000",
+      "last_record_time": "2025-07-28T15:45:19.366000",
+      "record_count": 318,
+      "file_size": 620298,
+      "time_span_hours": 1.2807705555555557,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "7ce31fe3-ca28-4321-b4d5-009e7eab3b87",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T19:18:58.593438",
+      "first_record_time": "2025-07-28T08:58:24.928000",
+      "last_record_time": "2025-07-28T11:18:58.566000",
+      "record_count": 316,
+      "file_size": 624763,
+      "time_span_hours": 2.3426772222222225,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "040edb11-859c-4335-99d8-f3aa2b91a00d",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T19:40:43.769229",
+      "first_record_time": "2025-07-28T10:50:32.895000",
+      "last_record_time": "2025-07-28T11:40:43.748000",
+      "record_count": 311,
+      "file_size": 1851397,
+      "time_span_hours": 0.8363480555555556,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "5b8642f5-7817-4d99-8b6d-4bf5f64eb71d",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-07-31T22:02:30.155487",
+      "first_record_time": "2025-07-31T12:44:41.032000",
+      "last_record_time": "2025-07-31T14:02:30.040000",
+      "record_count": 311,
+      "file_size": 2070197,
+      "time_span_hours": 1.2969466666666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "6f9560ff-0b84-43fc-a866-81c36084aeb0",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T22:09:10.936535",
+      "first_record_time": "2025-07-29T13:01:25.819000",
+      "last_record_time": "2025-07-29T14:09:10.912000",
+      "record_count": 309,
+      "file_size": 1328459,
+      "time_span_hours": 1.1291925,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "430a8d2f-64a8-4f7e-b4f8-31181067f501",
+      "project": "-Users-Zhuanz-Projects-SylloOS-Nx",
+      "file_modified": "2025-07-30T20:36:14.856407",
+      "first_record_time": "2025-07-30T11:43:50.173000",
+      "last_record_time": "2025-07-30T12:36:14.745000",
+      "record_count": 300,
+      "file_size": 382637,
+      "time_span_hours": 0.8734922222222222,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "1f67ed79-a4c3-4097-9c25-462563f13fed",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "file_modified": "2025-07-30T15:34:11.587649",
+      "first_record_time": null,
+      "last_record_time": "2025-07-30T07:34:11.546000",
+      "record_count": 295,
+      "file_size": 752365,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "eb3f24ef-5f6e-4c74-b609-149a82d1a0f5",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T16:50:46.583709",
+      "first_record_time": "2025-07-29T08:17:46.547000",
+      "last_record_time": "2025-07-29T08:50:46.538000",
+      "record_count": 292,
+      "file_size": 1180966,
+      "time_span_hours": 0.5499975,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "9d078598-0413-4a79-9e33-99749727c53b",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T01:52:44.405376",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T17:52:44.354000",
+      "record_count": 288,
+      "file_size": 1833695,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "90790431-6c8b-42f5-a000-d75a1a8d60a7",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T16:06:47.174863",
+      "first_record_time": "2025-07-31T06:27:14.516000",
+      "last_record_time": "2025-07-31T08:06:47.160000",
+      "record_count": 287,
+      "file_size": 954799,
+      "time_span_hours": 1.6590677777777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "235a0396-bf98-4e62-a198-7c9c016ff503",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T15:58:46.945441",
+      "first_record_time": "2025-07-29T05:48:22.481000",
+      "last_record_time": "2025-07-29T07:58:46.836000",
+      "record_count": 275,
+      "file_size": 814265,
+      "time_span_hours": 2.1734319444444443,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "d0c37520-bd4b-4136-9e21-5091bc3513d1",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T23:40:46.133855",
+      "first_record_time": "2025-07-30T14:56:26.148000",
+      "last_record_time": "2025-07-30T15:40:46.094000",
+      "record_count": 275,
+      "file_size": 2017763,
+      "time_span_hours": 0.7388738888888888,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "04d4b352-04af-447e-8824-17bee4986d7f",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T16:25:20.098218",
+      "first_record_time": "2025-07-31T06:44:50.535000",
+      "last_record_time": "2025-07-31T08:25:20.076000",
+      "record_count": 269,
+      "file_size": 350833,
+      "time_span_hours": 1.6748725,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "63311ead-3bdc-4e3d-a73a-10e4ecda6102",
+      "project": "-Users-Zhuanz-Projects-Syllo",
+      "file_modified": "2025-07-30T00:20:09.589061",
+      "first_record_time": "2025-07-29T15:47:22.753000",
+      "last_record_time": "2025-07-29T16:20:09.561000",
+      "record_count": 255,
+      "file_size": 429812,
+      "time_span_hours": 0.5463355555555556,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "36b38126-9a92-4aa1-af2f-1f78e1c3f2e8",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-07-31T18:57:26.605318",
+      "first_record_time": "2025-07-31T09:30:58.565000",
+      "last_record_time": "2025-07-31T10:57:26.579000",
+      "record_count": 254,
+      "file_size": 576817,
+      "time_span_hours": 1.441115,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "a0afa2ed-7358-48db-a8a4-35270ab72086",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T22:17:17.520189",
+      "first_record_time": "2025-07-28T12:18:28.248000",
+      "last_record_time": "2025-07-28T14:17:17.487000",
+      "record_count": 248,
+      "file_size": 738516,
+      "time_span_hours": 1.9803441666666666,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "0b6cb97a-ce6a-460b-b8d3-bfd8d8c2ff03",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T22:14:25.294640",
+      "first_record_time": "2025-07-30T13:20:48.055000",
+      "last_record_time": "2025-07-30T14:14:25.248000",
+      "record_count": 235,
+      "file_size": 902754,
+      "time_span_hours": 0.8936647222222223,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "64cfced8-5ff9-4243-ba83-6d4a94610974",
+      "project": "-Users-Zhuanz-Projects-nx-project",
+      "file_modified": "2025-07-30T19:40:17.130641",
+      "first_record_time": "2025-07-30T07:38:39.301000",
+      "last_record_time": "2025-07-30T11:40:17.101000",
+      "record_count": 232,
+      "file_size": 275072,
+      "time_span_hours": 4.027166666666666,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "18dbe83d-b825-46d3-881d-062da89131c7",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T13:48:16.213742",
+      "first_record_time": "2025-07-28T16:14:52.424000",
+      "last_record_time": "2025-07-29T05:48:16.195000",
+      "record_count": 232,
+      "file_size": 1420168,
+      "time_span_hours": 13.556603055555556,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "long_session"
+    },
+    {
+      "session_id": "8deb0a29-ba6a-409c-9785-139fdd225f51",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-07-31T19:37:10.064395",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T11:37:10.040000",
+      "record_count": 207,
+      "file_size": 432089,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "137e4b21-641f-4c6f-b288-ad127c871a24",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T01:30:06.340483",
+      "first_record_time": "2025-07-31T16:35:10.062000",
+      "last_record_time": "2025-07-31T17:30:06.301000",
+      "record_count": 203,
+      "file_size": 841696,
+      "time_span_hours": 0.9156219444444444,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "4484cdd7-bcf0-4eb2-9194-bad9eb6367e2",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T21:15:29.774978",
+      "first_record_time": "2025-07-28T12:18:28.248000",
+      "last_record_time": "2025-07-28T13:15:29.751000",
+      "record_count": 199,
+      "file_size": 277311,
+      "time_span_hours": 0.9504175,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "fdcb7861-6a1f-459a-9fc5-651b5f34b7c3",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "file_modified": "2025-07-30T15:10:28.327551",
+      "first_record_time": "2025-07-29T16:50:21.732000",
+      "last_record_time": "2025-07-30T07:10:28.297000",
+      "record_count": 194,
+      "file_size": 578968,
+      "time_span_hours": 14.335156944444446,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "long_session"
+    },
+    {
+      "session_id": "10997c96-e680-4218-a0cf-9b1209a5b2dc",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T01:47:14.753919",
+      "first_record_time": "2025-07-31T17:32:22.856000",
+      "last_record_time": "2025-07-31T17:47:14.701000",
+      "record_count": 184,
+      "file_size": 444618,
+      "time_span_hours": 0.24773472222222223,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "f3030658-ae45-4c69-b935-ee36b6cbeb50",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T01:30:13.554246",
+      "first_record_time": "2025-07-31T16:16:29.394000",
+      "last_record_time": "2025-07-31T17:30:13.482000",
+      "record_count": 180,
+      "file_size": 1404375,
+      "time_span_hours": 1.2289133333333333,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "6b3b8624-7145-49e6-ac16-b2ac6f7b1395",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-07-31T17:23:18.467064",
+      "first_record_time": "2025-07-31T08:37:19.425000",
+      "last_record_time": "2025-07-31T09:23:18.441000",
+      "record_count": 178,
+      "file_size": 416610,
+      "time_span_hours": 0.7663933333333334,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "7a44730b-7351-461f-a34a-3ad0c8542ff3",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T19:05:30.670949",
+      "first_record_time": "2025-07-29T08:17:46.547000",
+      "last_record_time": "2025-07-29T11:05:30.629000",
+      "record_count": 173,
+      "file_size": 654876,
+      "time_span_hours": 2.7955783333333333,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "6cb831b5-3576-4a11-babc-c257769bf69e",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T23:54:08.723343",
+      "first_record_time": "2025-07-28T14:36:35.378000",
+      "last_record_time": "2025-07-28T15:54:08.701000",
+      "record_count": 171,
+      "file_size": 499550,
+      "time_span_hours": 1.2925897222222222,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "b267eae5-425e-49cb-87b1-e4ca2df1a52f",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T18:22:49.483868",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T10:22:49.422000",
+      "record_count": 165,
+      "file_size": 1425791,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "a3ddf786-61a7-49bc-8d39-42aa931c282a",
+      "project": "-Users-Zhuanz-Projects-Syllo-mermaid-flow-prototype-development-flow",
+      "file_modified": "2025-07-30T00:43:00.961467",
+      "first_record_time": "2025-07-29T16:21:12.138000",
+      "last_record_time": "2025-07-29T16:43:00.938000",
+      "record_count": 163,
+      "file_size": 532878,
+      "time_span_hours": 0.3635555555555555,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "241edac7-88e0-4028-8f09-440719b4ac33",
+      "project": "-Users-Zhuanz-mmd-files",
+      "file_modified": "2025-07-29T23:13:59.995631",
+      "first_record_time": "2025-07-29T14:16:52.730000",
+      "last_record_time": "2025-07-29T15:13:59.970000",
+      "record_count": 155,
+      "file_size": 399760,
+      "time_span_hours": 0.952011111111111,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "3b8b513c-fff2-4bd6-880b-b77d4270ef2e",
+      "project": "-Users-Zhuanz-Projects-SylloOS-context-engineering-mermaid-flow",
+      "file_modified": "2025-07-31T14:10:34.266833",
+      "first_record_time": "2025-07-30T09:31:42.680000",
+      "last_record_time": "2025-07-31T06:10:34.248000",
+      "record_count": 153,
+      "file_size": 281389,
+      "time_span_hours": 20.647657777777777,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "long_session"
+    },
+    {
+      "session_id": "43586f6d-863a-4166-954e-28468bbe98ef",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T00:49:31.025096",
+      "first_record_time": "2025-07-28T16:14:52.424000",
+      "last_record_time": "2025-07-28T16:49:30.988000",
+      "record_count": 135,
+      "file_size": 667621,
+      "time_span_hours": 0.5773788888888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "c69d11cb-9bbc-4628-8c71-560236b8dba6",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T23:00:00.483858",
+      "first_record_time": "2025-07-29T13:01:25.819000",
+      "last_record_time": "2025-07-29T15:00:00.455000",
+      "record_count": 132,
+      "file_size": 285756,
+      "time_span_hours": 1.9762877777777779,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "0605eca9-9ed4-4f0f-bbe3-2db3531a04ef",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T20:31:52.545451",
+      "first_record_time": "2025-07-28T12:18:28.248000",
+      "last_record_time": "2025-07-28T12:31:52.521000",
+      "record_count": 131,
+      "file_size": 457794,
+      "time_span_hours": 0.2234091666666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "679d5575-8d2c-4c80-9ed0-e88a58b9667d",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-30T17:45:07.790251",
+      "first_record_time": "2025-07-30T09:36:47.751000",
+      "last_record_time": "2025-07-30T09:45:07.751000",
+      "record_count": 129,
+      "file_size": 268933,
+      "time_span_hours": 0.1388888888888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "2cc0031a-ab3a-4010-90f6-274aaba3a641",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T20:04:44.379933",
+      "first_record_time": "2025-07-28T11:52:43.713000",
+      "last_record_time": "2025-07-28T12:04:44.333000",
+      "record_count": 121,
+      "file_size": 486078,
+      "time_span_hours": 0.20017222222222222,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "130fe25c-1e60-4284-af63-6de0c007fe88",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:59:39.421691",
+      "first_record_time": "2025-07-28T14:47:42.321000",
+      "last_record_time": "2025-07-28T14:59:39.395000",
+      "record_count": 103,
+      "file_size": 240351,
+      "time_span_hours": 0.1991872222222222,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "ba87a487-c2ac-486f-8f3d-3e1f7043648d",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T22:10:34.412381",
+      "first_record_time": null,
+      "last_record_time": "2025-07-30T14:10:34.382000",
+      "record_count": 91,
+      "file_size": 475849,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "cae14a76-b2c5-4d82-b905-518a0042511c",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-29T00:26:12.240162",
+      "first_record_time": "2025-07-28T15:51:38.499000",
+      "last_record_time": "2025-07-28T16:26:12.222000",
+      "record_count": 83,
+      "file_size": 117265,
+      "time_span_hours": 0.5760341666666666,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "9dbcbbc5-cfce-4980-a35c-b8ba52d4a53e",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T22:36:29.610618",
+      "first_record_time": "2025-07-28T14:18:16.976000",
+      "last_record_time": "2025-07-28T14:36:29.546000",
+      "record_count": 83,
+      "file_size": 112958,
+      "time_span_hours": 0.30349166666666666,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "865796df-262e-40d9-8d2d-e550cc68b524",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-30T18:49:56.354544",
+      "first_record_time": "2025-07-30T09:36:27.446000",
+      "last_record_time": "2025-07-30T10:49:56.318000",
+      "record_count": 83,
+      "file_size": 164352,
+      "time_span_hours": 1.2246866666666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "e2f1de22-e024-4b26-86ee-feb1eeb731f6",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T00:59:10.967988",
+      "first_record_time": "2025-07-31T16:35:10.062000",
+      "last_record_time": "2025-07-31T16:59:10.925000",
+      "record_count": 80,
+      "file_size": 313840,
+      "time_span_hours": 0.40023972222222226,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "113a61f2-1633-456a-a654-892c4a9afc40",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:23:39.331704",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T14:23:39.312000",
+      "record_count": 78,
+      "file_size": 101336,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "33dd31dd-497d-4165-8e53-c648e70acab1",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T18:57:09.557614",
+      "first_record_time": "2025-07-28T10:50:52.756000",
+      "last_record_time": "2025-07-28T10:57:09.524000",
+      "record_count": 76,
+      "file_size": 678641,
+      "time_span_hours": 0.10465777777777777,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "06d02a12-48a4-4b33-b80e-f60f547c388e",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T00:26:46.604540",
+      "first_record_time": "2025-07-30T14:25:26.404000",
+      "last_record_time": "2025-07-30T16:26:46.583000",
+      "record_count": 76,
+      "file_size": 631701,
+      "time_span_hours": 2.0222719444444444,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "ecfc9be2-d93b-4936-8736-0a7315086e49",
+      "project": "-Users-Zhuanz-Projects-Arche-claudecodeui",
+      "file_modified": "2025-07-31T16:25:10.047322",
+      "first_record_time": "2025-07-31T08:19:13.973000",
+      "last_record_time": "2025-07-31T08:25:10.025000",
+      "record_count": 74,
+      "file_size": 284753,
+      "time_span_hours": 0.09890333333333334,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "cd10d11a-105c-4690-a402-1340dee0368d",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-07-31T20:16:49.004121",
+      "first_record_time": "2025-07-31T11:50:56.396000",
+      "last_record_time": "2025-07-31T12:16:48.656000",
+      "record_count": 67,
+      "file_size": 794897,
+      "time_span_hours": 0.4311833333333333,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "f63f812f-8051-41ce-801c-599042f3cdf0",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:45:29.714711",
+      "first_record_time": "2025-07-28T14:34:20.993000",
+      "last_record_time": "2025-07-28T14:45:29.697000",
+      "record_count": 58,
+      "file_size": 52774,
+      "time_span_hours": 0.1857511111111111,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "1c2fd100-4b72-45f7-a8dc-37ce2f4c4ba0",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T15:50:14.493292",
+      "first_record_time": null,
+      "last_record_time": "2025-08-01T07:50:14.478000",
+      "record_count": 58,
+      "file_size": 135582,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "7be092e0-535b-4e33-8c86-668c368feab5",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T18:17:51.159646",
+      "first_record_time": "2025-07-28T08:58:24.928000",
+      "last_record_time": "2025-07-28T10:17:51.133000",
+      "record_count": 57,
+      "file_size": 99078,
+      "time_span_hours": 1.3239458333333334,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "0cb7effa-440d-48c3-9600-605e3a24f4be",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T14:48:42.884324",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T06:48:42.861000",
+      "record_count": 56,
+      "file_size": 37576,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "7ed40852-ec5a-41a6-b517-690d67c30020",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T23:29:35.344830",
+      "first_record_time": "2025-07-28T14:36:35.378000",
+      "last_record_time": "2025-07-28T15:29:35.326000",
+      "record_count": 53,
+      "file_size": 111222,
+      "time_span_hours": 0.8833188888888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "0584bb4b-bf08-4a63-803b-77bca573cd6e",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T18:49:35.937014",
+      "first_record_time": "2025-07-28T10:43:39.506000",
+      "last_record_time": "2025-07-28T10:49:35.910000",
+      "record_count": 49,
+      "file_size": 286913,
+      "time_span_hours": 0.09900111111111111,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "d87bd289-bac3-4bd8-9afa-1c2d8a827bfb",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T01:55:21.328326",
+      "first_record_time": "2025-07-31T17:50:23.013000",
+      "last_record_time": "2025-07-31T17:55:21.309000",
+      "record_count": 48,
+      "file_size": 73282,
+      "time_span_hours": 0.08286,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fc654c76-9c11-45bb-962a-b940315be3f5",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T17:09:07.025753",
+      "first_record_time": "2025-07-28T09:02:02.947000",
+      "last_record_time": "2025-07-28T09:09:06.986000",
+      "record_count": 47,
+      "file_size": 39937,
+      "time_span_hours": 0.11778861111111111,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "2c7b497a-105f-4126-b3fb-7ea0c052d62e",
+      "project": "-Users-Zhuanz-mmd-files",
+      "file_modified": "2025-07-29T22:20:00.225734",
+      "first_record_time": "2025-07-29T14:18:06.146000",
+      "last_record_time": "2025-07-29T14:20:00.205000",
+      "record_count": 45,
+      "file_size": 150919,
+      "time_span_hours": 0.031683055555555555,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "1d9b276f-a1e4-4617-8748-e4a04bea3bc9",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-30T18:05:19.326432",
+      "first_record_time": "2025-07-30T09:36:27.446000",
+      "last_record_time": "2025-07-30T10:05:19.310000",
+      "record_count": 44,
+      "file_size": 46139,
+      "time_span_hours": 0.48107333333333335,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "58eb0e5f-1fe8-436e-8db8-7045edcc0d0d",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T22:42:13.884455",
+      "first_record_time": "2025-07-30T13:19:32.040000",
+      "last_record_time": "2025-07-30T14:42:13.853000",
+      "record_count": 43,
+      "file_size": 344863,
+      "time_span_hours": 1.378281388888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "6a4ca0b5-439d-448c-97a6-c2b08110ed2c",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T21:12:08.872830",
+      "first_record_time": "2025-07-29T13:01:25.819000",
+      "last_record_time": "2025-07-29T13:12:08.849000",
+      "record_count": 42,
+      "file_size": 430165,
+      "time_span_hours": 0.17861944444444444,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "c9c7962b-d565-4580-bad5-7c2e34000220",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T00:40:40.115129",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T16:40:40.089000",
+      "record_count": 40,
+      "file_size": 167837,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fec27aae-aacb-42f3-8129-155088f7b593",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T17:20:55.241799",
+      "first_record_time": "2025-07-28T09:20:01.506000",
+      "last_record_time": "2025-07-28T09:20:55.210000",
+      "record_count": 37,
+      "file_size": 59978,
+      "time_span_hours": 0.014917777777777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "2f73e368-485c-4b7c-a08b-eb2e449dc112",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T16:54:24.966524",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T08:54:24.948000",
+      "record_count": 37,
+      "file_size": 63446,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "d22a64d5-37cd-4cd9-a4b9-850b2d5b32a2",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T17:10:51.918081",
+      "first_record_time": "2025-07-28T09:09:55.760000",
+      "last_record_time": "2025-07-28T09:10:51.905000",
+      "record_count": 33,
+      "file_size": 58076,
+      "time_span_hours": 0.015595833333333335,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "f931d05e-28de-4264-bf3e-e771c62fe34e",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T19:30:02.355409",
+      "first_record_time": "2025-07-29T08:17:46.547000",
+      "last_record_time": "2025-07-29T11:30:02.334000",
+      "record_count": 33,
+      "file_size": 230748,
+      "time_span_hours": 3.204385277777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "fa4e59e8-9384-4f6d-b3b6-6934058f3d88",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T23:55:17.180391",
+      "first_record_time": "2025-07-30T14:56:26.148000",
+      "last_record_time": "2025-07-30T15:55:17.164000",
+      "record_count": 33,
+      "file_size": 141055,
+      "time_span_hours": 0.9808377777777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "33388ab0-8873-4c26-93ba-ea978b2f0f7e",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-07-31T20:54:09.528326",
+      "first_record_time": "2025-07-31T12:44:41.032000",
+      "last_record_time": "2025-07-31T12:54:09.505000",
+      "record_count": 33,
+      "file_size": 122454,
+      "time_span_hours": 0.15790916666666666,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "c26c932f-368e-41f0-85b5-60096da95e8a",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T21:03:18.405193",
+      "first_record_time": null,
+      "last_record_time": "2025-07-29T13:03:18.384000",
+      "record_count": 32,
+      "file_size": 68708,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "e3ec5aef-4416-45cc-9c00-671ce1824836",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T00:57:41.890273",
+      "first_record_time": "2025-07-31T16:16:29.394000",
+      "last_record_time": "2025-07-31T16:57:41.854000",
+      "record_count": 32,
+      "file_size": 103724,
+      "time_span_hours": 0.6867944444444445,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "8a706acf-85ed-4581-a454-dd886953c7ef",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T17:01:59.569757",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T09:01:59.543000",
+      "record_count": 31,
+      "file_size": 27862,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fc694624-b4f1-4b4c-a1ab-38dba9038652",
+      "project": "-Users-Zhuanz-Projects-Syllo",
+      "file_modified": "2025-07-30T00:32:50.035438",
+      "first_record_time": "2025-07-29T16:31:44.557000",
+      "last_record_time": "2025-07-29T16:32:50.013000",
+      "record_count": 31,
+      "file_size": 72814,
+      "time_span_hours": 0.018182222222222225,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "e9192f11-d4ae-40bf-adbd-de36438cf3da",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T00:21:43.704195",
+      "first_record_time": "2025-07-31T16:16:31.601000",
+      "last_record_time": "2025-07-31T16:21:43.687000",
+      "record_count": 29,
+      "file_size": 100026,
+      "time_span_hours": 0.08669055555555556,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "aa92eec2-444c-4164-b685-4708bfeecb26",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:47:24.225623",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T14:47:24.205000",
+      "record_count": 28,
+      "file_size": 23010,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "b2e386a1-355d-461f-b67c-b646ab44ca3c",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T00:26:05.031760",
+      "first_record_time": "2025-07-30T14:56:26.148000",
+      "last_record_time": "2025-07-30T16:26:04.999000",
+      "record_count": 28,
+      "file_size": 572124,
+      "time_span_hours": 1.4941252777777776,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "7c15faee-2f71-4963-875c-a6811fa90f04",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T22:13:05.626453",
+      "first_record_time": "2025-07-30T14:07:52.394000",
+      "last_record_time": "2025-07-30T14:13:05.611000",
+      "record_count": 28,
+      "file_size": 49587,
+      "time_span_hours": 0.08700472222222222,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "cc9423cf-bf72-462c-9b79-d6fa34b777cc",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-07-31T22:51:26.457623",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T14:51:26.423000",
+      "record_count": 28,
+      "file_size": 22561,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "0989f9f1-13e9-4849-a1d8-55b2b7caa661",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-30T17:47:04.208889",
+      "first_record_time": "2025-07-30T09:36:27.446000",
+      "last_record_time": "2025-07-30T09:47:04.189000",
+      "record_count": 26,
+      "file_size": 50970,
+      "time_span_hours": 0.17687305555555558,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "827f0bef-131e-44cf-9716-92932a133da3",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T19:55:59.753763",
+      "first_record_time": "2025-07-29T08:17:46.547000",
+      "last_record_time": "2025-07-29T11:55:59.730000",
+      "record_count": 25,
+      "file_size": 63634,
+      "time_span_hours": 3.636995277777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "f7e3708c-2e8c-4736-b650-018fd3331dc7",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T21:33:11.456652",
+      "first_record_time": "2025-07-28T12:18:28.248000",
+      "last_record_time": "2025-07-28T13:33:11.440000",
+      "record_count": 23,
+      "file_size": 53339,
+      "time_span_hours": 1.2453311111111112,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "e5905ce4-1c0b-4301-a7fc-6526f125112d",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T00:35:03.279273",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T16:35:03.263000",
+      "record_count": 23,
+      "file_size": 48381,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "55d78296-6e0c-4bf2-afd4-bee61286d3fb",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T00:37:11.403499",
+      "first_record_time": "2025-07-31T16:33:24.505000",
+      "last_record_time": "2025-07-31T16:37:11.373000",
+      "record_count": 23,
+      "file_size": 102676,
+      "time_span_hours": 0.06301888888888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "f1783d58-1113-43b0-a15c-3b2a1b766251",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T23:13:08.932669",
+      "first_record_time": "2025-07-29T15:12:35.282000",
+      "last_record_time": "2025-07-29T15:13:08.914000",
+      "record_count": 20,
+      "file_size": 14578,
+      "time_span_hours": 0.009342222222222222,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "a70695bf-eba9-4f3f-b80c-67b3fae4aaed",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T19:08:31.051037",
+      "first_record_time": "2025-07-28T11:06:50.857000",
+      "last_record_time": "2025-07-28T11:08:31.015000",
+      "record_count": 20,
+      "file_size": 18737,
+      "time_span_hours": 0.027821666666666668,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "99c77e74-a0b9-4201-8664-6215ee64c25f",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-30T18:07:23.753209",
+      "first_record_time": "2025-07-30T09:36:27.446000",
+      "last_record_time": "2025-07-30T10:07:23.734000",
+      "record_count": 19,
+      "file_size": 30825,
+      "time_span_hours": 0.5156355555555555,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "f777f485-c4ce-40ab-8541-4ed073beb900",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T00:11:40.194396",
+      "first_record_time": "2025-07-30T14:56:26.148000",
+      "last_record_time": "2025-07-30T16:11:40.157000",
+      "record_count": 19,
+      "file_size": 115904,
+      "time_span_hours": 1.253891388888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "8bd104f8-00a2-46b5-bc8b-b02633b43340",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T21:17:40.941457",
+      "first_record_time": "2025-07-29T13:01:25.819000",
+      "last_record_time": "2025-07-29T13:17:40.868000",
+      "record_count": 18,
+      "file_size": 265152,
+      "time_span_hours": 0.27084694444444446,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "f2170e9c-be83-4fb4-bd8c-32fc2b17212a",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-30T17:48:42.619877",
+      "first_record_time": "2025-07-30T09:36:27.446000",
+      "last_record_time": "2025-07-30T09:48:42.605000",
+      "record_count": 18,
+      "file_size": 19137,
+      "time_span_hours": 0.20421083333333334,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "a7797d3e-ac93-4e25-aa0a-bd49b3378792",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T22:29:52.457205",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T14:29:52.443000",
+      "record_count": 18,
+      "file_size": 17207,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "a2fe0bca-1291-4a00-8b23-6c4386085ef5",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T23:01:30.806912",
+      "first_record_time": "2025-07-30T14:59:16.573000",
+      "last_record_time": "2025-07-30T15:01:30.747000",
+      "record_count": 18,
+      "file_size": 193943,
+      "time_span_hours": 0.03727055555555556,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "8130546b-0321-40e9-ab2e-ffcc8ff44d32",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T17:09:44.039884",
+      "first_record_time": "2025-07-28T09:09:13.567000",
+      "last_record_time": "2025-07-28T09:09:44.024000",
+      "record_count": 16,
+      "file_size": 32597,
+      "time_span_hours": 0.008460277777777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "450fb370-d97a-450e-9fc6-3c09f07b2d23",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T18:41:41.734100",
+      "first_record_time": "2025-07-31T06:48:51.565000",
+      "last_record_time": "2025-07-31T10:41:41.716000",
+      "record_count": 16,
+      "file_size": 13219,
+      "time_span_hours": 3.8805975,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "70bc2a06-b45c-461b-aade-bb6118329390",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-07-31T19:52:14.254208",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T11:52:14.235000",
+      "record_count": 16,
+      "file_size": 15830,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "a63fd45a-0b10-4a94-a51b-89ef0c27aef0",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:35:51.638535",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T14:35:51.622000",
+      "record_count": 15,
+      "file_size": 13059,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "afe4a221-e1a8-402f-ac30-29d656eac193",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T19:43:03.015877",
+      "first_record_time": "2025-07-29T08:17:46.547000",
+      "last_record_time": "2025-07-29T11:43:02.994000",
+      "record_count": 15,
+      "file_size": 181090,
+      "time_span_hours": 3.421235277777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "59c4dfa6-ae1d-43f2-bc44-55a00e191c6f",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-08-01T22:08:56.658453",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 15,
+      "file_size": 1961,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "138e06e8-801d-404f-ac3f-78bda4566064",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T16:50:20.772743",
+      "first_record_time": "2025-07-28T08:45:53.458000",
+      "last_record_time": "2025-07-28T08:50:20.727000",
+      "record_count": 14,
+      "file_size": 12549,
+      "time_span_hours": 0.07424138888888888,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "dbd47b39-1c0e-44d6-9fa2-c6a8af4ab40a",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T18:31:51.661077",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T10:31:51.637000",
+      "record_count": 14,
+      "file_size": 13559,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "80c548a4-e465-4fea-927a-cd6cac24bd9e",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "file_modified": "2025-07-28T21:41:43.281442",
+      "first_record_time": "2025-07-28T13:41:11.389000",
+      "last_record_time": "2025-07-28T13:41:43.258000",
+      "record_count": 14,
+      "file_size": 28971,
+      "time_span_hours": 0.0088525,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "94952f8d-a871-4740-8df5-b5d3680681bc",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T22:18:08.683475",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 13,
+      "file_size": 2748,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "f6f363dd-5a36-4734-b6ec-e86f7560a779",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "file_modified": "2025-07-28T21:42:03.967062",
+      "first_record_time": "2025-07-28T13:41:48.364000",
+      "last_record_time": "2025-07-28T13:42:03.951000",
+      "record_count": 13,
+      "file_size": 12633,
+      "time_span_hours": 0.004329722222222222,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "d11175b2-2c92-493e-a7e0-f0e6dbcd103e",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T18:01:53.871507",
+      "first_record_time": "2025-07-28T10:01:22.609000",
+      "last_record_time": "2025-07-28T10:01:53.820000",
+      "record_count": 11,
+      "file_size": 8665,
+      "time_span_hours": 0.008669722222222221,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "b06dcb3c-a476-4990-b059-fa6ea2c2af9f",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T19:40:47.923492",
+      "first_record_time": "2025-07-28T11:40:00.599000",
+      "last_record_time": "2025-07-28T11:40:47.904000",
+      "record_count": 10,
+      "file_size": 8110,
+      "time_span_hours": 0.013140277777777779,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "c829cb3b-821e-4e1b-91e2-43133bd10e05",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T16:29:38.154100",
+      "first_record_time": "2025-07-28T08:28:44.018000",
+      "last_record_time": "2025-07-28T08:29:38.131000",
+      "record_count": 10,
+      "file_size": 7012,
+      "time_span_hours": 0.01503138888888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "32798515-c4e6-41cb-bb0e-ab0f15c2ebcd",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T00:41:11.722912",
+      "first_record_time": "2025-07-30T14:25:26.404000",
+      "last_record_time": "2025-07-30T16:41:11.699000",
+      "record_count": 10,
+      "file_size": 85073,
+      "time_span_hours": 2.2625819444444444,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "fb140440-f7d2-44b1-bed8-8e3ed40ecf56",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T00:16:25.272300",
+      "first_record_time": "2025-07-31T16:14:59.590000",
+      "last_record_time": "2025-07-31T16:16:25.191000",
+      "record_count": 10,
+      "file_size": 68964,
+      "time_span_hours": 0.023778055555555556,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "0e9f2811-65d6-40b0-9843-33636fe5fb8f",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T23:45:08.501619",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T15:45:08.490000",
+      "record_count": 9,
+      "file_size": 7673,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "9d607596-3242-4bce-aabd-4220532105c4",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "file_modified": "2025-08-01T18:16:24.652675",
+      "first_record_time": null,
+      "last_record_time": "2025-08-01T10:16:24.636000",
+      "record_count": 9,
+      "file_size": 8125,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "dcaa916a-6e5b-4f2a-80e7-2d8a642e220e",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "file_modified": "2025-08-01T18:14:47.092735",
+      "first_record_time": null,
+      "last_record_time": "2025-08-01T10:14:47.076000",
+      "record_count": 9,
+      "file_size": 8651,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "4e2f325e-b583-4d67-82a6-af637e4cae2e",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "file_modified": "2025-08-01T18:04:23.982553",
+      "first_record_time": null,
+      "last_record_time": "2025-08-01T10:04:23.967000",
+      "record_count": 9,
+      "file_size": 8376,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "f0a2a454-8c5d-4bb8-aee8-e17a546e4980",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "file_modified": "2025-07-28T21:43:32.550494",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T13:43:32.537000",
+      "record_count": 9,
+      "file_size": 5660,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "dbd970ad-44ba-44dc-9f40-075c7925577c",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:34:38.538287",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T14:34:38.524000",
+      "record_count": 8,
+      "file_size": 7045,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "af84dbda-2334-4ef5-91c9-3ff98b99e9c9",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:34:05.264022",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T14:34:05.251000",
+      "record_count": 8,
+      "file_size": 7140,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "c986c3dd-1325-4d20-bbdf-0443fea43188",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T23:03:31.627577",
+      "first_record_time": "2025-07-29T13:01:25.819000",
+      "last_record_time": "2025-07-29T15:03:31.608000",
+      "record_count": 8,
+      "file_size": 12211,
+      "time_span_hours": 2.034941388888889,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "82ff90b6-83f0-4fd7-80ae-c9fd872fe03c",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-07-31T20:44:00.987294",
+      "first_record_time": "2025-07-31T09:34:17.323000",
+      "last_record_time": "2025-07-31T12:44:00.970000",
+      "record_count": 8,
+      "file_size": 15003,
+      "time_span_hours": 3.162124166666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "33ec5df3-edb7-486a-b7f9-7682ad2322e8",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T22:19:29.219944",
+      "first_record_time": "2025-07-28T14:19:24.860000",
+      "last_record_time": "2025-07-28T14:19:29.201000",
+      "record_count": 7,
+      "file_size": 2852,
+      "time_span_hours": 0.0012058333333333333,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "33873de6-bcc5-47c7-88c1-eb47e1b04f18",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T19:15:35.611093",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T11:15:35.598000",
+      "record_count": 6,
+      "file_size": 4219,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "628538ae-e08e-4e4e-bd35-79eafcc54557",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T21:49:00.128399",
+      "first_record_time": "2025-07-28T13:48:47.643000",
+      "last_record_time": "2025-07-28T13:49:00.115000",
+      "record_count": 6,
+      "file_size": 4884,
+      "time_span_hours": 0.0034644444444444445,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "0920dfd6-38f0-4480-8c23-8c5f572f59ec",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T18:51:45.961016",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T10:51:45.938000",
+      "record_count": 6,
+      "file_size": 4642,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "05f49da7-3647-40bb-b8be-910fb3bf8045",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T16:58:01.584017",
+      "first_record_time": "2025-07-28T08:47:57.082000",
+      "last_record_time": "2025-07-28T08:58:01.566000",
+      "record_count": 5,
+      "file_size": 31597,
+      "time_span_hours": 0.16791222222222224,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "c8addf61-3167-4235-b22e-d8b9bc16ff95",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T16:47:22.960593",
+      "first_record_time": "2025-07-28T08:43:56.670000",
+      "last_record_time": "2025-07-28T08:47:22.933000",
+      "record_count": 5,
+      "file_size": 2483,
+      "time_span_hours": 0.05729527777777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "000a2e37-df7d-4fa8-9d2d-0a0f2a34d9da",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:06:06.891709",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T07:06:06.876000",
+      "record_count": 5,
+      "file_size": 3941,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fccf53e7-6899-407a-9747-c4973b78f6c8",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:35:59.334783",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T07:35:59.319000",
+      "record_count": 5,
+      "file_size": 4471,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "dc137827-70f1-4c6d-b26e-714f3116b3c3",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:03:58.953795",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T07:03:58.944000",
+      "record_count": 5,
+      "file_size": 3744,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "d7f42bc7-965a-4d73-8962-b2c73dc6a942",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:02:41.114013",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T07:02:41.104000",
+      "record_count": 5,
+      "file_size": 3575,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "50a4d26d-171b-4273-ac4a-d0191f0562f5",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:07:34.385424",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T07:07:34.371000",
+      "record_count": 5,
+      "file_size": 7687,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fb1358cc-14d9-4625-b3e6-045a51398ce9",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:35:26.418851",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T07:35:26.404000",
+      "record_count": 5,
+      "file_size": 4058,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "4748a2d2-96b6-4df0-8076-6c0d8a8cd925",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:13:31.749974",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T07:13:31.734000",
+      "record_count": 5,
+      "file_size": 3864,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "188bbb8b-1885-4140-9a37-aa1cfac601b6",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T18:34:02.021782",
+      "first_record_time": "2025-07-28T10:33:49.408000",
+      "last_record_time": "2025-07-28T10:34:01.999000",
+      "record_count": 5,
+      "file_size": 5004,
+      "time_span_hours": 0.0034974999999999997,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "74664bc9-8567-42d1-9e58-a992d3f61d34",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-prompt-enhancer",
+      "file_modified": "2025-07-28T18:17:41.964041",
+      "first_record_time": "2025-07-28T10:17:35.527000",
+      "last_record_time": "2025-07-28T10:17:41.951000",
+      "record_count": 5,
+      "file_size": 5066,
+      "time_span_hours": 0.0017844444444444446,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "f589948e-315b-4b2f-934a-af8a3466982a",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T01:32:23.017199",
+      "first_record_time": null,
+      "last_record_time": "2025-07-31T17:32:22.937000",
+      "record_count": 5,
+      "file_size": 2908,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fd0059b0-d0c9-4015-9cca-b6cb39e3b0e8",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T18:50:18.856677",
+      "first_record_time": "2025-07-28T10:50:15.614000",
+      "last_record_time": null,
+      "record_count": 4,
+      "file_size": 1564,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fa5ed747-c7b1-4275-afa4-24093a73af64",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:35:43.379044",
+      "first_record_time": "2025-07-31T07:35:32.785000",
+      "last_record_time": "2025-07-31T07:35:43.366000",
+      "record_count": 4,
+      "file_size": 3608,
+      "time_span_hours": 0.0029391666666666663,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "d12b30e2-e26c-4107-8ed4-688634c6f4ec",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:36:15.436928",
+      "first_record_time": "2025-07-31T07:36:06.303000",
+      "last_record_time": "2025-07-31T07:36:15.422000",
+      "record_count": 4,
+      "file_size": 4592,
+      "time_span_hours": 0.0025330555555555553,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "1475627d-1bf2-400a-aadc-06db8481d01c",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:06:27.255395",
+      "first_record_time": "2025-07-31T07:06:13.449000",
+      "last_record_time": "2025-07-31T07:06:27.245000",
+      "record_count": 4,
+      "file_size": 5980,
+      "time_span_hours": 0.003832222222222222,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "2972cb06-98c7-46fd-8f1e-c15d50eaf600",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:04:41.372967",
+      "first_record_time": "2025-07-31T07:04:35.413000",
+      "last_record_time": "2025-07-31T07:04:41.360000",
+      "record_count": 4,
+      "file_size": 4032,
+      "time_span_hours": 0.0016519444444444444,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "a210bf6b-b4bf-4f87-8579-7b31749b9a53",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:01:57.773243",
+      "first_record_time": "2025-07-31T07:01:52.146000",
+      "last_record_time": "2025-07-31T07:01:57.761000",
+      "record_count": 4,
+      "file_size": 3844,
+      "time_span_hours": 0.0015597222222222223,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "46e4cfad-fc32-4828-a3a1-69d2624839bc",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:03:02.304411",
+      "first_record_time": "2025-07-31T07:02:48.535000",
+      "last_record_time": "2025-07-31T07:03:02.289000",
+      "record_count": 4,
+      "file_size": 5314,
+      "time_span_hours": 0.0038205555555555553,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "10c028bd-bf40-4136-b58d-9ba174181a4c",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:12:11.669646",
+      "first_record_time": "2025-07-31T07:11:48.336000",
+      "last_record_time": "2025-07-31T07:12:11.646000",
+      "record_count": 4,
+      "file_size": 7945,
+      "time_span_hours": 0.006475,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "287a532e-c0a4-408a-af55-6ac392fb9da1",
+      "project": "-Users-Zhuanz-Projects-Arche-claude-code-test",
+      "file_modified": "2025-07-31T15:35:10.586010",
+      "first_record_time": "2025-07-31T07:34:59.638000",
+      "last_record_time": "2025-07-31T07:35:10.570000",
+      "record_count": 4,
+      "file_size": 4898,
+      "time_span_hours": 0.0030366666666666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "c0aef192-9e05-4f22-8fbf-ab9d3d48712b",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "file_modified": "2025-08-01T18:04:00.066617",
+      "first_record_time": "2025-08-01T10:03:51.194000",
+      "last_record_time": "2025-08-01T10:04:00.055000",
+      "record_count": 4,
+      "file_size": 4669,
+      "time_span_hours": 0.0024613888888888893,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "7a1d310a-db79-494a-a846-e159980f5f19",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "file_modified": "2025-08-01T18:15:58.373309",
+      "first_record_time": "2025-08-01T10:15:49.013000",
+      "last_record_time": "2025-08-01T10:15:58.356000",
+      "record_count": 4,
+      "file_size": 4550,
+      "time_span_hours": 0.002595277777777778,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "918ecad7-4d6b-497f-a887-204457e13e93",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway-src-claude-cli-analyzer-refactored",
+      "file_modified": "2025-08-01T18:14:24.707301",
+      "first_record_time": "2025-08-01T10:14:14.104000",
+      "last_record_time": "2025-08-01T10:14:24.691000",
+      "record_count": 4,
+      "file_size": 4933,
+      "time_span_hours": 0.002940833333333333,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "e2cfed2f-e0b9-44c0-b4f7-402a133c13a9",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "file_modified": "2025-07-28T21:43:05.065838",
+      "first_record_time": "2025-07-28T13:42:55.604000",
+      "last_record_time": "2025-07-28T13:43:05.046000",
+      "record_count": 4,
+      "file_size": 2783,
+      "time_span_hours": 0.0026227777777777777,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "a0adc0f5-609d-494a-b893-fcb2b921fbbf",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T16:58:10.890102",
+      "first_record_time": "2025-07-28T08:58:06.283000",
+      "last_record_time": "2025-07-28T08:58:10.870000",
+      "record_count": 3,
+      "file_size": 1269,
+      "time_span_hours": 0.0012741666666666665,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "57c792ae-6713-45ab-b546-81779b00c3ee",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T16:17:25.510407",
+      "first_record_time": "2025-07-29T08:01:35.867000",
+      "last_record_time": "2025-07-29T08:17:25.445000",
+      "record_count": 3,
+      "file_size": 1442,
+      "time_span_hours": 0.2637716666666667,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "c5bc9dd9-ce50-47b4-b83e-c52137707c97",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T16:01:32.599958",
+      "first_record_time": "2025-07-29T08:01:30.904000",
+      "last_record_time": "2025-07-29T08:01:32.581000",
+      "record_count": 3,
+      "file_size": 1307,
+      "time_span_hours": 0.00046583333333333334,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "349f5e0e-c5fe-45c0-b909-6019ca8a07a7",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T15:45:24.870952",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T07:45:24.839000",
+      "record_count": 3,
+      "file_size": 1172,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "cba4974e-262e-4ff9-8485-05a34f206d38",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T17:36:07.649011",
+      "first_record_time": "2025-07-28T09:36:05.546000",
+      "last_record_time": "2025-07-28T09:36:07.616000",
+      "record_count": 3,
+      "file_size": 1439,
+      "time_span_hours": 0.000575,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "d44fa565-5936-4e1b-b259-ef782e189a68",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "file_modified": "2025-07-28T21:41:45.827312",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T13:41:45.812000",
+      "record_count": 3,
+      "file_size": 1522,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "25b54c55-0a42-4cf0-be3c-7dce18f18478",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "file_modified": "2025-07-28T21:42:34.410727",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T13:42:34.382000",
+      "record_count": 3,
+      "file_size": 1399,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "e412c54f-69be-41d3-84bc-7efe41471ca3",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "file_modified": "2025-07-28T21:42:13.394043",
+      "first_record_time": null,
+      "last_record_time": "2025-07-28T13:42:13.371000",
+      "record_count": 3,
+      "file_size": 1635,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "2c5a96b1-c8c0-424a-8853-11c673dad4e5",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T00:30:24.855211",
+      "first_record_time": "2025-07-30T14:56:26.148000",
+      "last_record_time": "2025-07-30T16:30:24.729000",
+      "record_count": 3,
+      "file_size": 1433,
+      "time_span_hours": 1.5662725,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "a252cefe-9a41-4131-b1fc-857bb2abfc25",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T22:51:31.833626",
+      "first_record_time": "2025-07-30T13:19:32.040000",
+      "last_record_time": "2025-07-30T14:51:31.758000",
+      "record_count": 3,
+      "file_size": 1433,
+      "time_span_hours": 1.533255,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "32e73983-87d3-4862-ac3c-d5aac458e4b0",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-07-31T22:05:54.421632",
+      "first_record_time": "2025-07-31T12:54:16.100000",
+      "last_record_time": "2025-07-31T14:05:54.306000",
+      "record_count": 3,
+      "file_size": 1475,
+      "time_span_hours": 1.1939461111111112,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "medium_session"
+    },
+    {
+      "session_id": "a9eed458-66aa-4b4f-a97c-aac5c1f060d2",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-07-31T20:44:17.413016",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 3,
+      "file_size": 417,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "ad5e4229-d200-4e96-a55f-0b34cc722121",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-07-31T23:00:54.134424",
+      "first_record_time": "2025-07-31T14:43:37.774000",
+      "last_record_time": "2025-07-31T15:00:54.019000",
+      "record_count": 3,
+      "file_size": 1454,
+      "time_span_hours": 0.2878458333333333,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "c4b636c9-ba9f-433d-a844-fb2ae02ec78c",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-07-31T19:40:15.261152",
+      "first_record_time": "2025-07-31T11:01:42.745000",
+      "last_record_time": "2025-07-31T11:40:15.154000",
+      "record_count": 3,
+      "file_size": 1454,
+      "time_span_hours": 0.6423358333333333,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "e134a69b-5b36-4ee1-92f8-1bf8cbbfafa9",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-07-31T19:45:23.634179",
+      "first_record_time": "2025-07-31T11:01:42.745000",
+      "last_record_time": "2025-07-31T11:45:23.539000",
+      "record_count": 3,
+      "file_size": 1454,
+      "time_span_hours": 0.7279983333333333,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "short_session"
+    },
+    {
+      "session_id": "a0b03bab-a86a-4de1-baed-1788a3c9a122",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T16:47:47.661065",
+      "first_record_time": "2025-07-28T08:47:47.604000",
+      "last_record_time": "2025-07-28T08:47:47.628000",
+      "record_count": 2,
+      "file_size": 902,
+      "time_span_hours": 6.666666666666667e-06,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "1d7c2140-fde2-4b00-974b-fae0ba1a33ad",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:59:48.298690",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 2,
+      "file_size": 254,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "fb0805da-fe00-48d9-b638-a1349525e6c5",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-28T18:50:27.166996",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 2,
+      "file_size": 247,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "e598469c-e6fa-4bc3-bdaa-4b85dde7cf97",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T15:58:59.914347",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 2,
+      "file_size": 249,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "5ce4674b-7e5e-4880-9cd6-2322bfd9e789",
+      "project": "-Users-Zhuanz-Projects-SylloOS-Nx",
+      "file_modified": "2025-07-30T23:00:26.047525",
+      "first_record_time": "2025-07-30T15:00:25.928000",
+      "last_record_time": "2025-07-30T15:00:25.985000",
+      "record_count": 2,
+      "file_size": 879,
+      "time_span_hours": 1.5833333333333333e-05,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "1d793148-944a-4aa8-b501-ce46e819df92",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T15:20:06.570184",
+      "first_record_time": "2025-07-28T07:16:43.885000",
+      "last_record_time": "2025-07-28T07:20:06.508000",
+      "record_count": 2,
+      "file_size": 10349,
+      "time_span_hours": 0.05628416666666666,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "d3923380-e17f-4fbf-ba9c-1878115b9225",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit-ClaudeCodeSettings-modules-uv-helper",
+      "file_modified": "2025-07-28T21:42:25.240218",
+      "first_record_time": "2025-07-28T13:42:20.349000",
+      "last_record_time": "2025-07-28T13:42:25.218000",
+      "record_count": 2,
+      "file_size": 1282,
+      "time_span_hours": 0.0013525,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "a8d7fc2f-6463-4e21-ba63-71d22d71641a",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-31T14:24:34.955221",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 2,
+      "file_size": 278,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "b35e3cd9-f402-44c0-80e8-13192d212283",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T22:52:39.829779",
+      "first_record_time": "2025-07-30T14:52:39.685000",
+      "last_record_time": "2025-07-30T14:52:39.736000",
+      "record_count": 2,
+      "file_size": 869,
+      "time_span_hours": 1.4166666666666666e-05,
+      "file_vs_record_timing": {
+        "likely_new_file": false,
+        "confidence": 0.7,
+        "reason": "delayed_file_update"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "342d2d94-c5a4-42b1-9864-619afafe18e8",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T14:11:51.331503",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 2,
+      "file_size": 252,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "burst_interaction"
+    },
+    {
+      "session_id": "78ed8728-f849-483f-957f-2c7061d8e994",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T22:33:31.419168",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 139,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "3998bb23-993b-44de-9b42-3710985c26bc",
+      "project": "-Users-Zhuanz-Projects-echo-studio-VibeCoding-Kit-tools-CC-Toolkit",
+      "file_modified": "2025-07-28T23:11:04.122494",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 121,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "b452135f-853d-42ac-96fd-f541a8f6fa0a",
+      "project": "-Users-Zhuanz-Projects-ProtoSOP",
+      "file_modified": "2025-07-29T16:17:43.855593",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 125,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "8ccacc7c-cd1a-49e6-82e8-7018d0a03b5e",
+      "project": "-Users-Zhuanz-Projects-SylloOS",
+      "file_modified": "2025-07-30T00:51:10.982865",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 131,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "22267a9a-ca90-4cdb-b445-0f0f4521f841",
+      "project": "-Users-Zhuanz-test",
+      "file_modified": "2025-07-28T16:30:08.813943",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 116,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "387954f2-cd48-4cf8-ba33-a9be23ca40ea",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-08-01T14:43:11.255136",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 133,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "bb5effca-1df9-49bf-bbb0-1ce7961dd7e2",
+      "project": "-Users-Zhuanz-Projects-Arche",
+      "file_modified": "2025-07-30T22:53:14.189943",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 124,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "64345392-2270-463e-8e3c-8937980b8e9b",
+      "project": "-Users-Zhuanz-Projects-claude-code-gateway",
+      "file_modified": "2025-08-01T14:39:18.066379",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 127,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "2ea7bcd0-4bb1-4936-8688-eb1b5a5ca01e",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T00:14:56.663353",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 121,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    },
+    {
+      "session_id": "8ff3d4f3-fcf4-4a51-9345-e71d89ee83af",
+      "project": "-Users-Zhuanz-Projects-ClaudeCodeUI",
+      "file_modified": "2025-08-01T00:30:34.207211",
+      "first_record_time": null,
+      "last_record_time": null,
+      "record_count": 1,
+      "file_size": 126,
+      "time_span_hours": 0,
+      "file_vs_record_timing": {
+        "likely_new_file": true,
+        "confidence": 0.5,
+        "reason": "no_record_timestamp"
+      },
+      "session_pattern": "single_interaction"
+    }
+  ]
+}

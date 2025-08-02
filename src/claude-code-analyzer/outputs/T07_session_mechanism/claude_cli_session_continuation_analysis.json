@@ -1,0 +1,116 @@
+{
+  "analysis_metadata": {
+    "task_id": "T07",
+    "task_name": "Claude CLI会话继续机制分析",
+    "execution_time": "2025-08-02T11:35:00Z",
+    "test_environment": "Claude Code CLI v1.x",
+    "tester": "Claude Code Analysis System"
+  },
+  "tested_mechanisms": {
+    "continue_short": {
+      "command": "claude -c",
+      "description": "继续最近的对话（短参数形式）",
+      "behavior": "继续最近活跃的会话，不是最近创建的会话",
+      "test_results": {
+        "success": true,
+        "context_preservation": "partial",
+        "notes": "成功继续了会话，但继续的是之前的某个活跃会话而非最新创建的测试会话"
+      }
+    },
+    "continue_long": {
+      "command": "claude --continue", 
+      "description": "继续最近的对话（长参数形式）",
+      "behavior": "与 -c 完全相同的功能",
+      "test_results": {
+        "success": true,
+        "context_preservation": "partial",
+        "notes": "确认与 -c 是同一功能的不同写法"
+      }
+    },
+    "resume_with_id": {
+      "command": "claude --resume <session_id>",
+      "description": "恢复指定session ID的会话",
+      "behavior": "精确恢复指定的会话，需要提供具体session ID",
+      "test_results": {
+        "success": true,
+        "context_preservation": "complete",
+        "notes": "能够准确恢复指定会话的上下文，记住了之前会话中的具体信息"
+      }
+    },
+    "resume_interactive": {
+      "command": "claude --resume",
+      "description": "交互式选择要恢复的会话",
+      "behavior": "在 --print 模式下不可用，需要指定session ID",
+      "test_results": {
+        "success": false,
+        "context_preservation": "N/A",
+        "notes": "与 --print 模式不兼容，必须提供session ID"
+      }
+    }
+  },
+  "key_findings": {
+    "session_id_tracking": {
+      "finding": "Claude CLI 会自动为每次会话生成唯一的session ID",
+      "evidence": [
+        "测试会话1: 1e04b281-4abc-42bb-a6b4-21db21ee2f76",
+        "测试会话2: 0750ef81-3a9a-46db-bac0-6a7140f79675"
+      ],
+      "implications": "可以通过session ID精确追踪和恢复会话"
+    },
+    "context_preservation_differences": {
+      "continue_vs_resume": {
+        "continue": "继续'最近活跃'的会话，不一定是最新创建的",
+        "resume": "精确恢复指定session ID的会话内容",
+        "reliability": "resume更可靠，continue可能会混淆不同会话"
+      }
+    },
+    "print_mode_limitations": {
+      "finding": "--print 模式对会话继续有特殊限制",
+      "details": {
+        "continue_compatible": true,
+        "resume_requires_id": true,
+        "interactive_resume_blocked": true
+      }
+    }
+  },
+  "practical_implications": {
+    "use_cases": {
+      "quick_continuation": "使用 -c/--continue 快速继续最近的工作",
+      "precise_restoration": "使用 --resume <session_id> 精确恢复特定会话",
+      "scripting": "在脚本中使用 --resume 确保恢复正确的会话上下文"
+    },
+    "best_practices": {
+      "session_id_storage": "在自动化脚本中保存session ID用于后续恢复",
+      "context_validation": "恢复会话后验证上下文是否正确",
+      "error_handling": "为会话恢复失败准备降级方案"
+    }
+  },
+  "test_scenarios_summary": {
+    "scenario_1": {
+      "description": "创建测试会话并用 -c 继续",
+      "result": "成功，但继续的不是刚创建的会话",
+      "lesson": "-c 继续的是'最近活跃'而非'最新创建'的会话"
+    },
+    "scenario_2": {
+      "description": "验证 --continue 与 -c 的等价性",
+      "result": "完全相同的行为",
+      "lesson": "两者是同一功能的不同写法"
+    },
+    "scenario_3": {
+      "description": "使用 --resume 恢复指定session",
+      "result": "成功恢复上下文",
+      "lesson": "--resume 能准确恢复指定会话的完整上下文"
+    },
+    "scenario_4": {
+      "description": "测试 --resume 在 --print 模式的限制",
+      "result": "必须提供session ID",
+      "lesson": "非交互模式下 --resume 需要明确指定会话"
+    }
+  },
+  "recommended_usage_patterns": {
+    "interactive_development": "使用 claude -c 快速继续开发工作",
+    "automated_scripts": "使用 claude --resume <session_id> 确保上下文正确性",
+    "session_management": "通过 --output-format json 获取并保存session ID",
+    "context_verification": "恢复会话后通过简单问题验证上下文"
+  }
+}

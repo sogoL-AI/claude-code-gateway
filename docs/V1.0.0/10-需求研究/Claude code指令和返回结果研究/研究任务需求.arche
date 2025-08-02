@@ -1,0 +1,360 @@
+# Claude CLI输出格式研究任务需求
+
+<task_definition>
+  <work_directory>/Users/Zhuanz/Projects/claude-code-gateway/docs/V1.0.0/10-需求研究/Claude code指令和返回结果研究</work_directory>
+  <priority>高 (项目核心基础)</priority>
+  
+  <core_objective>
+    **主要目标**: 系统性地研究用户电脑里全部的Claude CLI会话记录，**逆向分析Claude Code官方的完整字段设计规范**
+
+    **关键问题**: 之前的API设计都是基于理论推测，没有基于真实的CLI输出数据，这是不可靠的。我们必须基于真实数据来反推官方设计。
+
+    **最终目标**: **反推Claude Code官方的字段设计**，包括每个字段的准确类型、所有枚举值、使用模式等，输出与官方规范完全一致的字段设计文档
+  </core_objective>
+</task_definition>
+
+<requirements>
+  <data_source_discovery>
+    **主要任务**: 找到Claude CLI会话记录的实际存储位置
+    
+    **参考指南**: `/Users/Zhuanz/Projects/claude-code-gateway/Resource/Claude-Code-Directory-Structure.md`
+    
+    **可能位置**:
+    - `~/.claude/projects/`
+    - 项目本地`.claude/`目录
+    
+    **要求**: 必须找到所有会话记录，不能遗漏
+  </data_source_discovery>
+
+  <comprehensive_analysis>
+    **覆盖范围**: 用户电脑里**全部**的Claude CLI会话记录
+    
+    **时间跨度**: 包含历史所有会话，不限时间范围
+    
+    **项目覆盖**: 所有项目的会话记录都要分析
+    
+    **类型完整性**: 所有返回结果的内容类型都要识别和分类
+  </comprehensive_analysis>
+
+  <field_reverse_engineering>
+    **字段收集**: 收集所有响应中的key-value对，建立完整的字段清单
+    
+    **类型推断**: 通过分析value的内容和格式，推断每个字段的数据类型
+    
+    **枚举识别**: 识别哪些字段是枚举类型，收集所有可能的枚举值
+    
+    **嵌套结构**: 分析字段的嵌套层级关系，如`xx.xx.xx.xx`的字段结构
+    
+    **使用分析**: 通过prompt-response配对，分析各字段的使用场景和触发条件
+  </field_reverse_engineering>
+</requirements>
+
+<efficiency_requirements>
+  <automation_first>
+    **核心原则**: 能写代码辅助提高分析效率就写代码
+    
+    **自动化**: 一切能自动化的分析都要自动化
+    
+    **批量处理**: 处理大量会话数据要使用批量处理脚本
+    
+    **避免手工**: 尽量避免手工逐个分析，效率太低
+  </automation_first>
+
+  <python_stack>
+    **环境**: 如果使用Python，必须使用uv环境管理，提高开发效率
+    
+    **依赖**: 利用uv的快速依赖解析和安装能力
+    
+    **性能**: 利用Python的数据处理库(pandas, json等)提高处理效率
+    
+    **并发**: 必要时使用并发或异步处理大量数据
+  </python_stack>
+
+  <subagent_collaboration>
+    **任务分解**: 为了提高效率以及做好上下文管理，要善用subagent能力
+    
+    **专业化**: 不同的subagent负责不同的专业任务
+    
+    **并行处理**: 利用subagent实现任务的并行处理
+    
+    **上下文管理**: 通过subagent保持长期的上下文记忆
+  </subagent_collaboration>
+</efficiency_requirements>
+
+## 📊 技术实施要求
+
+### 1. 数据处理策略
+
+```yaml
+数据扫描:
+  - 自动扫描所有可能的会话存储位置
+  - 建立完整的数据源清单和索引
+  - 统计会话数量、时间分布、项目分布
+
+格式识别:
+  - 自动识别text、json、stream-json等格式
+  - 基于模式匹配进行初步分类
+  - 建立格式特征库
+
+内容分类:
+  - 按命令类型分类: 对话、工具调用、斜杠命令等
+  - 按输出特征分类: 成功、错误、部分、流式等
+  - 按复杂度分类: 简单、复杂、超长等
+
+字段分析: (新增)
+  - 递归遍历所有JSON结构，收集所有字段路径
+  - 分析字段值的数据类型和格式特征
+  - 识别枚举字段并收集所有枚举值
+  - 建立字段使用频率和关联关系统计
+```
+
+<expected_outputs>
+  <claude_code_official_field_specification>
+    **描述**: 基于真实数据反推的Claude Code官方字段设计规范
+    
+    **格式**:
+    ```
+    字段名 | 类型 | 描述 | 示例 | 出现频率
+    ```
+    
+    **示例**:
+    | 字段名             | 类型                | 描述      | 示例                                     | 出现频率 |
+    |-----------------|-------------------|---------|----------------------------------------|--------|
+    | session_id      | String            | 会话唯一标识符 | "cc9423cf-bf72-462c-9b79-d6fa34b777cc" | 100%   |
+    | message.role    | Enum              | 消息角色    | "user", "assistant"                   | 100%   |
+    | message.content.tool_use.name | Enum | 工具名称 | "Read", "Write", "Bash"              | 45.2%  |
+  </claude_code_official_field_specification>
+
+  <enum_values_complete_list>
+    **描述**: 所有枚举字段的完整值列表
+    
+    **示例**:
+    ```
+    message.role: ["user", "assistant"]
+    message.type: ["text", "tool_use", "tool_result"]
+    tool_names: ["Read", "Write", "Bash", "TodoWrite", ...31种]
+    ```
+  </enum_values_complete_list>
+
+  <field_usage_statistics>
+    **描述**: 字段使用统计和模式分析
+    
+    **包含内容**:
+    - 字段出现频率
+    - 字段值的模式和格式
+    - 字段间的关联关系
+  </field_usage_statistics>
+
+  <official_api_schema>
+    **描述**: 与Claude Code官方完全一致的API结构定义
+    
+    **格式**: JSON Schema格式
+  </official_api_schema>
+</expected_outputs>
+
+<success_criteria>
+  <quantitative_metrics>
+    **数据覆盖**: ≥ 95% 的存储会话记录
+    
+    **字段收集**: ≥ 100个不同的字段路径
+    
+    **枚举识别**: ≥ 20个枚举字段及其完整值列表
+    
+    **类型识别**: ≥ 15种不同的输出格式类型
+    
+    **样例收集**: ≥ 200个各类型的典型样例
+  </quantitative_metrics>
+
+  <qualitative_metrics>
+    **准确性**: 基于真实数据，无推测成分
+    
+    **完整性**: 覆盖所有已知和未知的输出类型
+    
+    **实用性**: 可直接用于API设计和开发
+    
+    **字段一致性**: 反推出的字段设计与Claude Code官方设计100%一致
+  </qualitative_metrics>
+</success_criteria>
+
+<key_constraints>
+  <time_efficiency>
+    **挑战**: 文档可能很长，数据量很大
+    
+    **要求**: 必须通过代码自动化提高分析效率
+    
+    **禁止**: 不允许低效的手工逐个分析方式
+  </time_efficiency>
+
+  <data_accuracy>
+    **要求**: 必须基于真实的CLI输出数据
+    
+    **禁止**: 不允许基于推测或理论的格式设计
+    
+    **验证**: 所有分类和样例必须来源于真实会话记录
+  </data_accuracy>
+
+  <completeness_guarantee>
+    **要求**: 不能遗漏任何输出类型
+    
+    **特殊关注**: 异常情况、边界条件、特殊格式
+    
+    **发现机制**: 建立新类型发现和记录机制
+  </completeness_guarantee>
+
+  <field_reverse_accuracy>
+    **类型推断**: 字段类型推断必须基于大量样本验证
+    
+    **枚举完整性**: 枚举值收集必须完整，不能遗漏
+    
+    **结构准确性**: 嵌套字段结构必须准确反映官方设计
+  </field_reverse_accuracy>
+</key_constraints>
+
+<execution_sequence>
+  <step priority="critical" order="1">
+    **名称**: 位置定位
+    
+    **描述**: 找到Claude CLI会话记录的存储位置
+    
+    **重要性**: 首要任务
+  </step>
+  
+  <step priority="high" order="2">
+    **名称**: 工具开发
+    
+    **描述**: 开发自动化分析工具(Python + uv)，规范代码目录结构
+  </step>
+  
+  <step priority="high" order="3">
+    **名称**: 数据扫描
+    
+    **描述**: 全量扫描所有会话记录
+  </step>
+  
+  <step priority="medium" order="4">
+    **名称**: 格式分类
+    
+    **描述**: 自动分类所有输出格式类型
+  </step>
+  
+  <step priority="high" order="5">
+    **名称**: 字段收集
+    
+    **描述**: 递归收集所有字段路径和值
+    
+    **备注**: 新增核心步骤
+  </step>
+  
+  <step priority="high" order="6">
+    **名称**: 类型推断
+    
+    **描述**: 分析字段数据类型和枚举值
+    
+    **备注**: 新增核心步骤
+  </step>
+  
+  <step priority="medium" order="7">
+    **名称**: 样例收集
+    
+    **描述**: 为每种类型收集代表性样例
+  </step>
+  
+  <step priority="low" order="8">
+    **名称**: 新类型发现
+    
+    **描述**: 识别和记录新发现的类型
+  </step>
+  
+  <step priority="high" order="9">
+    **名称**: 字段设计文档
+    
+    **描述**: 生成完整的字段设计规范
+    
+    **备注**: 新增核心成果
+  </step>
+  
+  <step priority="medium" order="10">
+    **名称**: 报告生成
+    
+    **描述**: 生成完整的分析报告和技术文档
+  </step>
+</execution_sequence>
+
+<implementation_suggestions>
+  <subagent_specialization>
+    <coordinator_agent>
+      **职责**:
+      - 整体任务规划和进度管控
+      - 最终报告整合和质量把控
+    </coordinator_agent>
+
+    <data_discovery_agent>
+      **职责**:
+      - 专门负责找到会话记录存储位置
+      - 建立完整的数据源映射
+    </data_discovery_agent>
+
+    <analysis_processing_agent>
+      **职责**:
+      - 开发和执行自动化分析脚本
+      - 进行大规模数据处理和分类
+    </analysis_processing_agent>
+
+    <field_analysis_agent>
+      **职责**:
+      - 专门负责字段收集和类型推断
+      - 分析字段结构和枚举值
+      - 生成字段设计文档
+      
+      **备注**: 新增核心专业角色
+    </field_analysis_agent>
+
+    <report_generation_agent>
+      **职责**:
+      - 负责生成各类分析报告
+      - 创建技术文档和实施建议
+    </report_generation_agent>
+  </subagent_specialization>
+
+  <code_structure_template>
+    **项目根目录**: `claude-cli-analyzer/`
+    
+    **核心模块** (`src/core/`):
+    - 会话扫描核心
+    - 格式分析核心
+    - 字段提取核心
+    - 类型推断核心
+    
+    **专业分析器** (`src/analyzers/`):
+    - 内容分析器
+    - 模式分析器
+    - 字段分析器
+    
+    **工具库** (`src/utils/`):
+    - file_utils, json_utils, output_utils
+    
+    **输出目录** (`outputs/`):
+    - sessions, analysis, fields, reports
+  </code_structure_template>
+</implementation_suggestions>
+
+<project_importance>
+  **核心基础**: 这是Claude Code Gateway项目的核心基础工作，其质量直接影响后续API设计的准确性和可靠性
+  
+  **质量要求**: 必须保证高质量完成
+  
+  **战略目标**: 通过系统性的字段反推，最终目标是生成与Claude Code官方字段设计高度一致的API规范文档
+</project_importance>
+
+<task_summary>
+  **主要使命**: 反推Claude Code官方完整字段设计规范
+  
+  **数据基础**: 基于用户电脑中全部真实CLI会话记录
+  
+  **输出目标**: 生成与官方100%一致的字段规范文档
+  
+  **成功指标**:
+  - 字段收集: ≥100个字段路径
+  - 枚举识别: ≥20个枚举字段完整值列表
+  - 数据覆盖: ≥95%会话记录覆盖
+</task_summary>

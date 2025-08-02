@@ -1,0 +1,213 @@
+{
+  "生成时间": "2025-08-02T00:00:27.333548",
+  "任务信息": {
+    "task_id": "T02",
+    "task_name": "消息结构类型分析"
+  },
+  "说明": "深度对象类型分析摘要",
+  "统计信息": {
+    "处理文件数": 468,
+    "分析对象总数": 147800,
+    "发现类型数": 414
+  },
+  "结构复杂度分布": {
+    "15": 5,
+    "3": 16,
+    "16": 6,
+    "33": 4,
+    "20": 6,
+    "4": 14,
+    "6": 11,
+    "32": 7,
+    "19": 8,
+    "42": 8,
+    "29": 7,
+    "13": 2,
+    "8": 13,
+    "5": 14,
+    "31": 7,
+    "10": 9,
+    "36": 25,
+    "37": 18,
+    "24": 17,
+    "27": 11,
+    "9": 12,
+    "23": 21,
+    "7": 22,
+    "2": 14,
+    "21": 2,
+    "35": 6,
+    "22": 4,
+    "30": 4,
+    "12": 4,
+    "39": 13,
+    "26": 14,
+    "28": 11,
+    "14": 2,
+    "38": 15,
+    "25": 15,
+    "1": 1,
+    "43": 5,
+    "40": 12,
+    "34": 2,
+    "48": 1,
+    "52": 2,
+    "41": 11,
+    "54": 1,
+    "44": 3,
+    "49": 1,
+    "47": 1,
+    "11": 4,
+    "45": 2,
+    "46": 1
+  },
+  "出现次数分布": {
+    "50次以上": 120,
+    "11-50次": 79,
+    "6-10次": 52,
+    "2-5次": 89,
+    "单次出现": 74
+  },
+  "热门类型": [
+    {
+      "排名": 1,
+      "结构签名": "object{content:string,id:string,priority:string,status:string}",
+      "结构复杂度": 5,
+      "出现次数": 24091,
+      "占比": "16.30%"
+    },
+    {
+      "排名": 2,
+      "结构签名": "object{cache_creation_input_tokens:integer,cache_read_input_tokens:integer,input_tokens:integer,output_tokens:integer,service_tier:string}",
+      "结构复杂度": 6,
+      "出现次数": 18263,
+      "占比": "12.36%"
+    },
+    {
+      "排名": 3,
+      "结构签名": "object{signature:string,thinking:string,type:string}",
+      "结构复杂度": 4,
+      "出现次数": 6966,
+      "占比": "4.71%"
+    },
+    {
+      "排名": 4,
+      "结构签名": "object{content:array[object{signature:string,thinking:string,type:string}],id:string,model:string,role:string,stop_reason:null,stop_sequence:null,type:string,usage:object{cache_creation_input_tokens:i...",
+      "结构复杂度": 20,
+      "出现次数": 5291,
+      "占比": "3.58%"
+    },
+    {
+      "排名": 5,
+      "结构签名": "object{cwd:string,gitBranch:string,isSidechain:boolean,message:object{content:array[object{signature:string,thinking:string,type:string}],id:string,model:string,role:string,stop_reason:null,stop_seque...",
+      "结构复杂度": 33,
+      "出现次数": 5283,
+      "占比": "3.57%"
+    },
+    {
+      "排名": 6,
+      "结构签名": "object{content:array[object{content:string,tool_use_id:string,type:string}],role:string}",
+      "结构复杂度": 8,
+      "出现次数": 5248,
+      "占比": "3.55%"
+    },
+    {
+      "排名": 7,
+      "结构签名": "object{content:string,tool_use_id:string,type:string}",
+      "结构复杂度": 4,
+      "出现次数": 5248,
+      "占比": "3.55%"
+    },
+    {
+      "排名": 8,
+      "结构签名": "object{text:string,type:string}",
+      "结构复杂度": 3,
+      "出现次数": 4547,
+      "占比": "3.08%"
+    },
+    {
+      "排名": 9,
+      "结构签名": "object{content:array[object{content:string,is_error:boolean,tool_use_id:string,type:string}],role:string}",
+      "结构复杂度": 9,
+      "出现次数": 2528,
+      "占比": "1.71%"
+    },
+    {
+      "排名": 10,
+      "结构签名": "object{content:string,is_error:boolean,tool_use_id:string,type:string}",
+      "结构复杂度": 5,
+      "出现次数": 2528,
+      "占比": "1.71%"
+    },
+    {
+      "排名": 11,
+      "结构签名": "object{content:string,role:string}",
+      "结构复杂度": 3,
+      "出现次数": 2171,
+      "占比": "1.47%"
+    },
+    {
+      "排名": 12,
+      "结构签名": "object{id:string,input:object{command:string,description:string},name:string,type:string}",
+      "结构复杂度": 8,
+      "出现次数": 2117,
+      "占比": "1.43%"
+    },
+    {
+      "排名": 13,
+      "结构签名": "object{command:string,description:string}",
+      "结构复杂度": 3,
+      "出现次数": 2117,
+      "占比": "1.43%"
+    },
+    {
+      "排名": 14,
+      "结构签名": "object{content:array[object{id:string,input:object{command:string,description:string},name:string,type:string}],id:string,model:string,role:string,stop_reason:string,stop_sequence:null,type:string,usa...",
+      "结构复杂度": 24,
+      "出现次数": 1945,
+      "占比": "1.32%"
+    },
+    {
+      "排名": 15,
+      "结构签名": "object{cwd:string,gitBranch:string,isSidechain:boolean,message:object{content:array[object{id:string,input:object{command:string,description:string},name:string,type:string}],id:string,model:string,ro...",
+      "结构复杂度": 37,
+      "出现次数": 1944,
+      "占比": "1.32%"
+    },
+    {
+      "排名": 16,
+      "结构签名": "object{content:array[object{text:string,type:string}],id:string,model:string,role:string,stop_reason:null,stop_sequence:null,type:string,usage:object{cache_creation_input_tokens:integer,cache_read_inp...",
+      "结构复杂度": 19,
+      "出现次数": 1822,
+      "占比": "1.23%"
+    },
+    {
+      "排名": 17,
+      "结构签名": "object{cwd:string,gitBranch:string,isSidechain:boolean,message:object{content:array[object{text:string,type:string}],id:string,model:string,role:string,stop_reason:null,stop_sequence:null,type:string,...",
+      "结构复杂度": 32,
+      "出现次数": 1793,
+      "占比": "1.21%"
+    },
+    {
+      "排名": 18,
+      "结构签名": "object{lines:array[string],newLines:integer,newStart:integer,oldLines:integer,oldStart:integer}",
+      "结构复杂度": 7,
+      "出现次数": 1675,
+      "占比": "1.13%"
+    },
+    {
+      "排名": 19,
+      "结构签名": "object{cwd:string,gitBranch:string,isSidechain:boolean,message:object{content:array[object{content:string,is_error:boolean,tool_use_id:string,type:string}],role:string},parentUuid:string,sessionId:str...",
+      "结构复杂度": 27,
+      "出现次数": 1657,
+      "占比": "1.12%"
+    },
+    {
+      "排名": 20,
+      "结构签名": "object{interrupted:boolean,isImage:boolean,stderr:string,stdout:string}",
+      "结构复杂度": 5,
+      "出现次数": 1657,
+      "占比": "1.12%"
+    }
+  ]
+}

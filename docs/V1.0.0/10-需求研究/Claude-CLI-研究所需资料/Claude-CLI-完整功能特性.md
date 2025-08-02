@@ -1,0 +1,654 @@
+# Claude Code CLI 完整功能特性汇总
+
+## 📋 目录
+1. [核心架构](#核心架构)
+2. [命令行接口](#命令行接口)
+3. [权限和执行模式](#权限和执行模式)
+4. [斜杠命令系统](#斜杠命令系统)
+5. [内置工具系统](#内置工具系统)
+6. [会话管理](#会话管理)
+7. [Agent 系统](#agent-系统)
+8. [记忆和上下文管理](#记忆和上下文管理)
+9. [MCP 集成](#mcp-集成)
+10. [配置系统](#配置系统)
+11. [交互模式特性](#交互模式特性)
+12. [文件系统操作](#文件系统操作)
+13. [高级工作流](#高级工作流)
+
+---
+
+## 核心架构
+
+### 设计理念
+- **终端原生**：直接在开发者的终端环境中工作
+- **组合性**：遵循 Unix 哲学，可与其他工具组合使用
+- **可脚本化**：支持自动化和批处理
+- **企业就绪**：内置安全性和合规性支持
+
+### 核心能力
+- 直接编辑文件
+- 执行命令
+- 创建提交
+- 代码库导航
+- 自动化重复性开发任务
+
+---
+
+## 命令行接口
+
+### 基础启动命令
+
+#### 交互式模式
+```bash
+# 启动交互式 REPL
+claude
+
+# 使用初始提示启动
+claude "query"
+
+# 管道输入处理
+cat logs.txt | claude -p "explain"
+```
+
+#### 非交互模式
+```bash
+# 非交互模式查询并退出
+claude -p "explain this function"
+
+# 结合管道使用
+echo "code snippet" | claude --print "review this"
+```
+
+#### 会话恢复
+```bash
+# 继续最近的对话
+claude -c
+
+# 继续最近对话并添加新提示
+claude -c -p "query"
+
+# 恢复特定会话
+claude -r "<session-id>" "query"
+
+# 显示会话选择器
+claude --resume
+```
+
+### 核心 CLI 标志
+
+| 标志 | 短形式 | 功能描述 |
+|------|--------|----------|
+| `--add-dir` | | 添加工作目录 |
+| `--allowedTools` | | 指定允许的工具 |
+| `--print` | `-p` | 打印响应而不进入交互模式 |
+| `--output-format` | | 指定响应格式 (text/json/stream-json) |
+| `--verbose` | | 启用详细日志 |
+| `--model` | | 为会话设置特定模型 |
+| `--permission-mode` | | 设置权限模式 |
+| `--continue` | `-c` | 加载最近的对话 |
+| `--resume` | | 显示会话选择器 |
+| `--max-turns` | | 限制非交互模式的代理回合数 |
+
+### 输出格式选项
+- `text`: 默认纯文本输出
+- `json`: 完整对话日志
+- `stream-json`: 实时 JSON 输出
+
+---
+
+## 权限和执行模式
+
+### 权限模式 (Permission Modes)
+
+Claude Code 支持多种权限控制模式，通过 `--permission-mode` 参数设置：
+
+#### 1. Ask 模式 (`ask`)
+```bash
+claude --permission-mode ask
+```
+- **行为**：每次工具使用前都要求用户明确确认
+- **适用场景**：高安全要求环境，需要精确控制每个操作
+- **用户体验**：交互性强，但可能频繁打断工作流
+
+#### 2. Auto 模式 (`auto`)
+```bash
+claude --permission-mode auto
+```
+- **行为**：自动执行用户允许列表中的工具，无需逐次确认
+- **适用场景**：日常开发工作，信任环境下的高效操作
+- **用户体验**：流畅的自动化体验
+
+#### 3. Plan 模式 (`plan`)
+```bash
+claude --permission-mode plan
+```
+- **行为**：制定详细的执行计划，但不直接执行工具
+- **适用场景**：
+  - 架构规划和设计阶段
+  - 复杂变更的预览和评估
+  - 学习和理解代码库
+  - 风险评估和影响分析
+- **用户体验**：查看完整计划后再决定是否执行
+
+#### 4. Bypass 模式 (`bypass`)
+```bash
+claude --permission-mode bypass
+```
+- **行为**：跳过大部分权限检查，直接执行
+- **适用场景**：完全信任的环境，需要最高执行效率
+- **安全警告**：需要谨慎使用，可能存在安全风险
+
+#### 危险权限跳过
+```bash
+claude --dangerously-skip-permissions
+```
+- **功能**：完全绕过所有权限提示
+- **警告**：文档明确标记为"谨慎使用"
+- **适用场景**：自动化脚本、CI/CD 环境
+
+### 执行模式 (Execution Modes)
+
+#### 1. 交互式模式 (Interactive Mode)
+```bash
+claude
+claude "initial query"
+```
+- **特点**：默认模式，支持持续对话
+- **功能**：
+  - 实时工具调用
+  - 动态权限控制
+  - 命令历史和导航
+  - 多行输入支持
+
+#### 2. 非交互模式 (Non-Interactive Mode)
+```bash
+claude --print "query"
+claude -p "analyze this file"
+```
+- **特点**：一次性执行，输出结果后退出
+- **功能**：
+  - 批处理和脚本化
+  - 管道操作支持
+  - 结果输出格式控制
+
+#### 3. 扩展思考模式 (Extended Thinking Mode)
+触发方式：
+```bash
+claude "think about this architecture"
+claude "think harder about the solution"
+claude "plan the implementation"
+```
+- **特点**：显示详细的思考过程
+- **适用场景**：
+  - 规划架构变更
+  - 调试复杂问题
+  - 创建实施计划
+  - 理解复杂代码库
+  - 评估方案权衡
+- **用户体验**：可见的推理过程（灰色斜体文本）
+
+#### 4. 子代理模式 (Subagent Mode)
+```bash
+claude
+> /agents
+```
+- **特点**：自动委托给专用 AI 代理
+- **功能**：
+  - 任务自动分发
+  - 专用代理切换
+  - 项目级和个人级代理支持
+
+### 会话控制模式
+
+#### 继续模式 (Continue Mode)
+```bash
+claude --continue
+claude -c
+```
+- **功能**：恢复最近的对话会话
+- **保持**：上下文、配置、权限设置
+
+#### 恢复模式 (Resume Mode)
+```bash
+claude --resume
+```
+- **功能**：显示会话选择器，可选择特定会话恢复
+- **特点**：支持多会话管理
+
+### 模式组合使用
+
+#### 规划 + 非交互模式
+```bash
+claude --permission-mode plan --print "refactor this module"
+```
+- **效果**：生成重构计划但不执行，适合代码审查
+
+#### 自动 + 继续模式
+```bash
+claude --permission-mode auto --continue
+```
+- **效果**：在信任环境下高效继续之前的工作
+
+#### 扩展思考 + 规划模式
+```bash
+claude --permission-mode plan "think carefully about migrating to microservices"
+```
+- **效果**：深度思考 + 详细规划，适合重大技术决策
+
+### API 设计影响
+
+这些模式对 API 设计的关键影响：
+
+1. **权限控制接口**
+   - 需要支持会话级权限模式设置
+   - 工具调用的动态权限检查
+   - 权限提升和降级机制
+
+2. **执行流程控制**
+   - 规划模式的计划生成和预览
+   - 交互式确认流程
+   - 批处理执行支持
+
+3. **会话状态管理**
+   - 模式状态的持久化
+   - 会话间的模式继承
+   - 动态模式切换
+
+---
+
+## 斜杠命令系统
+
+### 内置斜杠命令
+
+#### 会话管理命令
+- `/clear` - 清除对话历史
+- `/status` - 查看账户和系统状态
+- `/cost` - 显示 token 使用统计
+- `/help` - 获取使用帮助
+
+#### 配置和设置命令
+- `/config` - 查看/修改配置
+- `/permissions` - 查看/更新权限
+- `/model` - 选择或更改AI模型
+- `/terminal-setup` - 安装换行键绑定
+
+#### 项目和开发命令
+- `/add-dir` - 添加额外的工作目录
+- `/init` - 使用 CLAUDE.md 指南初始化项目
+- `/memory` - 编辑 CLAUDE.md 内存文件
+- `/review` - 请求代码审查
+- `/pr_comments` - 查看拉取请求评论
+
+#### 账户管理命令
+- `/login` - 切换 Anthropic 账户
+- `/logout` - 登出 Anthropic 账户
+
+#### 扩展功能命令
+- `/agents` - 管理自定义AI子代理
+- `/mcp` - 管理 MCP 服务器连接
+- `/vim` - 进入 vim 模式
+- `/compact` - 压缩对话（可选择焦点）
+- `/bug` - 向 Anthropic 报告错误
+- `/doctor` - 检查 Claude Code 安装健康状态
+
+### 自定义斜杠命令
+
+#### 创建和组织
+```bash
+# 项目级命令
+mkdir -p .claude/commands
+echo "Analyze this code for performance issues" > .claude/commands/optimize.md
+
+# 个人级命令
+mkdir -p ~/.claude/commands
+echo "Review this code for security vulnerabilities" > ~/.claude/commands/security.md
+```
+
+#### 命令特性
+- 使用 `$ARGUMENTS` 占位符支持参数
+- 可包含 bash 命令和文件引用
+- 通过子目录支持命名空间组织
+- 支持 Markdown 格式的命令描述
+
+### MCP 斜杠命令
+- 动态发现的 MCP 服务器提供的命令
+- 格式：`/mcp__<server-name>__<prompt-name>`
+- 支持服务器定义的参数
+
+---
+
+## 内置工具系统
+
+### 核心工具列表
+
+#### 文件操作工具
+- **Read** - 读取文件内容
+- **Write** - 写入文件内容
+- **Edit** - 编辑文件内容
+- **Glob** - 文件模式匹配
+
+#### 系统交互工具
+- **Bash** - 执行 shell 命令
+- **WebFetch** - 获取网页内容
+
+#### 搜索和导航工具
+- **Grep** - 搜索文件内容
+- **LS** - 列出目录内容
+
+### 工具权限管理
+- 可配置每个工具的访问权限
+- 支持 `allow` 和 `deny` 列表
+- 可按会话或全局设置权限
+
+---
+
+## 会话管理
+
+### 会话生命周期
+- **创建**：自动或手动创建新会话
+- **持久化**：会话状态自动保存
+- **恢复**：支持按 ID 或时间恢复会话
+- **清理**：可配置的自动清理策略
+
+### 会话特性
+- **多会话并行**：支持同时运行多个独立会话
+- **上下文隔离**：每个会话维护独立的上下文
+- **历史记录**：完整的对话历史保存
+- **搜索功能**：支持历史对话搜索
+
+### 会话数据结构
+- 消息历史
+- 工具调用记录
+- 配置状态
+- 文件系统状态
+
+---
+
+## Agent 系统
+
+### Agent 架构
+- **专用 Agent**：为特定任务优化的子代理
+- **自定义 Agent**：用户可创建的专用助手
+- **Agent 切换**：会话中动态切换 Agent
+
+### Agent 配置
+```bash
+# Agent 存储位置
+~/.claude/agents/          # 个人 Agent
+.claude/agents/            # 项目 Agent
+```
+
+### Agent 特性
+- 专用提示和指令
+- 特定工具访问权限
+- 自定义行为模式
+- 性能分析和优化
+
+---
+
+## 记忆和上下文管理
+
+### 记忆类型
+
+#### 1. 项目记忆 (`./CLAUDE.md`)
+- 团队共享的项目指令
+- 架构和工作流信息
+- 项目特定的最佳实践
+
+#### 2. 用户记忆 (`~/.claude/CLAUDE.md`)
+- 个人偏好设置
+- 跨项目的通用指令
+- 个人工作习惯
+
+#### 3. 项目本地记忆（已弃用）
+
+### 记忆功能特性
+- **自动加载**：启动时自动加载记忆文件
+- **文件导入**：使用 `@path/to/import` 语法导入其他文件
+- **递归发现**：向上递归查找记忆文件
+- **快速添加**：使用 `#` 快捷方式快速添加记忆
+- **编辑命令**：`/memory` 命令编辑记忆文件
+
+### 记忆最佳实践
+- 使用结构化 Markdown
+- 保持指令具体明确
+- 定期审查和更新记忆内容
+
+---
+
+## MCP 集成
+
+### MCP 协议概述
+Model Context Protocol (MCP) 是一个开放协议，使大语言模型能够访问外部工具和数据源。
+
+### MCP 服务器类型
+- **stdio** - 标准输入输出服务器
+- **SSE** - Server-Sent Events 服务器
+- **HTTP** - HTTP 服务器
+
+### 配置范围
+- **本地配置** - 单机配置
+- **项目配置** - 项目级配置
+- **用户配置** - 用户级配置
+
+### 资源访问
+- 语法：`@server:protocol://resource/path`
+- 自动获取和包含引用资源
+- 支持模糊搜索资源路径
+
+### 认证支持
+- OAuth 2.0 支持远程服务器
+- 通过 `/mcp` 命令进行交互式认证
+
+### 安全注意事项
+- 第三方 MCP 服务器存在潜在的提示注入风险
+- 建议谨慎使用第三方服务器
+
+---
+
+## 配置系统
+
+### 配置文件层次
+
+#### 用户级配置
+- `~/.claude/settings.json` - 用户设置
+
+#### 项目级配置
+- `.claude/settings.json` - 项目共享设置
+- `.claude/settings.local.json` - 个人项目设置
+
+#### 企业级配置
+- 系统特定路径的托管设置
+
+### 关键配置选项
+
+#### 权限设置
+```json
+{
+  "allow": ["specific-tool"],
+  "deny": ["blocked-tool"],
+  "additionalDirectories": ["/path/to/extra/dir"],
+  "defaultMode": "permissive"
+}
+```
+
+#### 全局设置
+```json
+{
+  "autoUpdates": true,
+  "preferredNotifChannel": "terminal",
+  "theme": "dark",
+  "verbose": false
+}
+```
+
+#### 高级设置
+```json
+{
+  "apiKeyHelper": "custom-auth-script",
+  "cleanupPeriodDays": 30,
+  "hooks": {
+    "preToolExecution": "pre-hook-command",
+    "postToolExecution": "post-hook-command"
+  },
+  "model": "claude-3-5-sonnet-20241022"
+}
+```
+
+### 环境变量
+- `ANTHROPIC_API_KEY` - API 认证密钥
+- `ANTHROPIC_MODEL` - 指定使用的模型
+- `CLAUDE_CODE_USE_BEDROCK` - 启用 Amazon Bedrock
+- `CLAUDE_CODE_USE_VERTEX` - 启用 Google Vertex AI
+- `DISABLE_TELEMETRY` - 禁用使用跟踪
+
+### 配置管理命令
+```bash
+# 查看设置
+claude config list
+
+# 查看特定设置
+claude config get <key>
+
+# 更改设置
+claude config set <key> <value>
+
+# 修改列表设置
+claude config add <key> <value>
+claude config remove <key> <value>
+```
+
+---
+
+## 交互模式特性
+
+### 键盘快捷键
+
+#### 通用快捷键
+- `Ctrl+C` - 取消当前输入或生成
+- `Ctrl+D` - 退出 Claude Code 会话
+- `Ctrl+L` - 清除终端屏幕
+- `Up/Down 箭头` - 导航命令历史
+- `Esc` + `Esc` - 编辑上一条消息
+- `Ctrl+R` - 反向搜索历史记录
+
+#### 多行输入方法
+- `\` + `Enter` - 快速转义（适用于所有终端）
+- `Option+Enter` - macOS 默认
+- `Shift+Enter` - 终端设置模式
+
+### Vim 模式
+
+#### 启用 Vim 模式
+```bash
+/vim
+```
+
+#### 导航命令（NORMAL 模式）
+- `h/j/k/l` - 左/下/上/右移动
+- `w` - 下一个单词
+- `e` - 单词结尾
+- `b` - 上一个单词
+- `0` - 行首
+- `$` - 行尾
+- `gg` - 输入开始
+- `G` - 输入结束
+
+#### 编辑命令
+- `x` - 删除字符
+- `dd` - 删除行
+- `D` - 删除到行尾
+- `cc` - 更改行
+- `.` - 重复上次更改
+
+### 快速命令语法
+- `#` 开头 - 内存快捷方式到 CLAUDE.md
+- `/` 开头 - 调用斜杠命令
+
+### 命令历史
+- 按工作目录存储
+- 使用 `/clear` 命令清除
+- 支持反向搜索
+
+---
+
+## 文件系统操作
+
+### 文件引用语法
+- `@src/utils/auth.js` - 引用特定文件
+- `@src/components` - 引用目录
+- `@github:repos/owner/repo/issues` - 引用 MCP 资源
+
+### 文件操作能力
+- **读取文件** - 完整文件内容读取
+- **写入文件** - 创建和覆盖文件
+- **编辑文件** - 精确的文件内容修改
+- **目录遍历** - 递归目录结构分析
+- **模式匹配** - Glob 模式文件查找
+
+### 权限控制
+- 可配置的目录访问权限
+- 文件操作权限管理
+- 安全的文件系统边界
+
+---
+
+## 高级工作流
+
+### 常见开发工作流
+
+#### 1. 代码库理解
+- 快速概览项目结构
+- 查找相关代码文件
+- 追踪代码执行路径
+
+#### 2. 错误修复
+- 分析错误消息
+- 建议代码修复
+- 验证解决方案
+
+#### 3. 代码重构
+- 识别过时代码
+- 推荐现代实践
+- 保持向后兼容性
+
+#### 4. 并行开发会话
+- Git 工作树并行会话
+- 隔离的 Claude Code 环境
+- 多分支开发支持
+
+### 高级特性
+
+#### 扩展思考模式
+- 复杂问题的深度分析
+- 多步骤推理过程
+- 详细的解决方案规划
+
+#### 图像分析
+- 截图和图表分析
+- 设计文档理解
+- 视觉问题诊断
+
+#### Unix 风格集成
+- 管道操作支持
+- 与其他命令行工具组合
+- 脚本化和自动化
+
+### 企业特性
+- 安全性和合规性内置
+- 企业级配置管理
+- 审计和监控支持
+
+---
+
+## 总结
+
+Claude Code CLI 提供了一个功能丰富、高度可配置的开发环境，涵盖了从基础文件操作到高级工作流自动化的完整开发周期。其核心优势包括：
+
+1. **全面的功能覆盖** - 从代码编辑到项目管理的完整工具链
+2. **高度可定制** - 丰富的配置选项和扩展机制
+3. **开发者友好** - 符合 Unix 哲学的设计理念
+4. **企业就绪** - 内置的安全性和合规性支持
+5. **生态集成** - 通过 MCP 协议的无限扩展能力
+
+这为构建 Claude Code Gateway 的原生 API 提供了完整的功能映射基础。
